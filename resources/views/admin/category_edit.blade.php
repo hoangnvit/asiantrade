@@ -26,7 +26,7 @@
         <div class="row mt-3">
             <label class="col-5" for="active" :value="__('Active')"> Active Status</label>
             <div class="col-8">
-            @if ($cat_detail['active'] === 1)
+            @if ($cat_detail['active'] == 1)
    
                 <input id="active" class="block mt-1 w-full" type="radio" name="active" value=1 checked />
                 <label for="active"> Active</label>
