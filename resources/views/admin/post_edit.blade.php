@@ -75,11 +75,11 @@
                                 <label for="unactive" > Un-Active</label>
                                 @else
 
-                                <label class="col-3" for="active" :value="__('Active')" > Active Status</label>
+                                    <label class="col-3" for="active" :value="__('Active')" > Active Status</label>
 
-                                <input id="active" class="block mt-1 w-full" type="radio" name="status" value=1  />
+                                <input id="active" class="block mt-1 w-full" type="radio" name="status" value=1   />
                                 <label for="unactive" class="col-2"> Active</label>
-                                <input id="unactive" class="block mt-1 w-full" type="radio" name="status" value=0   checked/>
+                                <input id="unactive" class="block mt-1 w-full" type="radio" name="status" value=0 checked/>
                                 <label for="unactive" > Un-Active</label>
                                 @endif
                             </div>
