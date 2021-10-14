@@ -68,15 +68,31 @@
                 <div class='col-4'>
                     <label for="admin" :value="__('Postalcode')"> Role</label>
                 </div>
+                @if( $user_detail['admin'] === 1 )
+                    <div class='col-4'>
+
+                        <input id="admin" class="block mt-1 w-full" type="radio" name="admin" value=1 checked/>
+                        <label for="admin"> Admin</label>
+                    </div>
+                    <div class='col-4'>
+                        <input id="admin" class="block mt-1 w-full" type="radio" name="admin" value=0  />
+                        <label for="admin"> Users</label>
+                    </div>
+
+                @else
                 <div class='col-4'>
 
-                    <input id="admin" class="block mt-1 w-full" type="radio" name="admin" value=1 {{ $user_detail['admin'] === 1 ? "checked" : "Goodbye" }} />
+                    <input id="admin" class="block mt-1 w-full" type="radio" name="admin" value=1/>
                     <label for="admin"> Admin</label>
-                </div>
-                <div class='col-4'>
-                    <input id="admin" class="block mt-1 w-full" type="radio" name="admin" value=0 {{ $user_detail['admin'] === 0 ? "checked" : "Goodbye" }} />
+                    </div>
+                    <div class='col-4'>
+                    <input id="admin" class="block mt-1 w-full" type="radio" name="admin" value=0   checked />
                     <label for="admin"> Users</label>
-                </div>
+                    </div>
+
+
+
+                @endif
             </div>
 
         </div>
