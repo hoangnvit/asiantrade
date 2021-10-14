@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             'username' => 'admin',
             'fname'=>'anthony',
             'lname'=>'nguyen',
-            'email' => 'hoangcnt48@gmail.com',
+            'email' => 'huyetlehoa@gmail.com',
             'password' => '$2y$10$j2VtWepcxAi9.LhK8/x8gentVCE/oWUv7iGxiIr3X2FhEAG0AfsCK',
             'address'=>'103-45 fennell ave East',
             'postalcode'=>'L9A1R7',
