@@ -68,7 +68,7 @@
                 <div class='col-4'>
                     <label for="admin" :value="__('Postalcode')"> Role</label>
                 </div>
-                @if( $user_detail['admin'] === 1 )
+                @if( $user_detail['admin'] == 1 )
                     <div class='col-4'>
 
                         <input id="admin" class="block mt-1 w-full" type="radio" name="admin" value=1 checked/>

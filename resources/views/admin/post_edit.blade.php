@@ -68,14 +68,14 @@
             <div class="row mt-2">
                                
                                 <label class="col-3" for="active" :value="__('Active')" > Active Status</label>
-                                @if($post_detail['status'] === 1)
+                                @if($post_detail['status'] == 1)
                                 <input id="active" class="block mt-1 w-full" type="radio" name="status" value=1 checked  />
                                 @else
                                 <input id="active" class="block mt-1 w-full" type="radio" name="status" value=1  />
                                 @endif
                                
                                 <label for="unactive" class="col-2"> Active</label>
-                                @if($post_detail['status'] === 1)
+                                @if($post_detail['status'] == 1)
                                     <input id="unactive" class="block mt-1 w-full" type="radio" name="status" value=0 />
                                 @else
                                     <input id="unactive" class="block mt-1 w-full" type="radio" name="status" value=0 checked />
