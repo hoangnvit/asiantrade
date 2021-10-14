@@ -75,7 +75,7 @@
                                 @endif
                                
                                 <label for="unactive" class="col-2"> Active</label>
-                                @if($post_detail['status'] !== 1)
+                                @if($post_detail['status'] === 1)
                                     <input id="unactive" class="block mt-1 w-full" type="radio" name="status" value=0 />
                                 @else
                                     <input id="unactive" class="block mt-1 w-full" type="radio" name="status" value=0 checked />
