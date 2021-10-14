@@ -66,22 +66,24 @@
 
             
             <div class="row mt-2">
-                                @if($post_detail['status'] === 1)
+                               
                                 <label class="col-3" for="active" :value="__('Active')" > Active Status</label>
-
+                                @if($post_detail['status'] === 1)
                                 <input id="active" class="block mt-1 w-full" type="radio" name="status" value=1 checked  />
-                                <label for="unactive" class="col-2"> Active</label>
-                                <input id="unactive" class="block mt-1 w-full" type="radio" name="status" value=0 />
-                                <label for="unactive" > Un-Active</label>
                                 @else
-
-                                    <label class="col-3" for="active" :value="__('Active')" > Active Status</label>
-
-                                <input id="active" class="block mt-1 w-full" type="radio" name="status" value=1   />
-                                <label for="unactive" class="col-2"> Active</label>
-                                <input id="unactive" class="block mt-1 w-full" type="radio" name="status" value=0 checked/>
-                                <label for="unactive" > Un-Active</label>
+                                <input id="active" class="block mt-1 w-full" type="radio" name="status" value=1  />
                                 @endif
+                               
+                                <label for="unactive" class="col-2"> Active</label>
+                                @if($post_detail['status'] !== 1)
+                                    <input id="unactive" class="block mt-1 w-full" type="radio" name="status" value=0 />
+                                @else
+                                    <input id="unactive" class="block mt-1 w-full" type="radio" name="status" value=0 checked />
+                                @endif
+
+                                <label for="unactive" > Un-Active</label>
+                               
+
                             </div>
              <div>
             
