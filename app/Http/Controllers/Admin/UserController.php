@@ -89,7 +89,7 @@ class UserController extends Controller
             $user['lname'] = $request['lname'];
             $user['admin'] = $request['admin'];
             $user['avatar'] = $avatar;
-            return $user;
+           
             $user->save();
             return redirect()->route('admin_users');
         } catch (\Illuminate\Database\QueryException $ex) {
