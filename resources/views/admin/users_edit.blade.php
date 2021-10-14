@@ -66,7 +66,7 @@
 
             <div class='row mt-2'>
                 <div class='col-4'>
-                    <label for="admin" :value="__('Postalcode')"> Role</label>
+                    <label for="admin"> Role</label>
                 </div>
                 @if( $user_detail['admin'] == 1 )
                     <div class='col-4'>
