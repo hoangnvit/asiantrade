@@ -82,7 +82,7 @@
                 @else
                 <div class='col-4'>
 
-                    <input id="admin" class="block mt-1 w-full" type="radio" name="admin" value=1/>
+                    <input id="admin" class="block mt-1 w-full" type="radio" name="admin" value=1 />
                     <label for="admin"> Admin</label>
                     </div>
                     <div class='col-4'>
