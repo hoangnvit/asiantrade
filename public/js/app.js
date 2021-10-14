@@ -1957,6 +1957,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -1968,18 +1980,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
     return _ref = {
       list_messages: {},
-      title: '',
-      message: '',
+      title: "",
+      message: "",
       display_form: 0,
       display_messages: 1,
       list_users: {},
-      message_body: '',
-      message_title: '',
+      message_body: "",
+      message_title: "",
       receiver: 1,
       ck_inbox: 0,
       ck_outbox: 0,
-      sender: ''
-    }, _defineProperty(_ref, "receiver", ''), _defineProperty(_ref, "result_message", ''), _defineProperty(_ref, "num_inbox", 0), _defineProperty(_ref, "num_outbox", 0), _defineProperty(_ref, "unread", 0), _defineProperty(_ref, "sent_time", ''), _defineProperty(_ref, "display_detail", 0), _defineProperty(_ref, "message_id_detail", 0), _ref;
+      sender: ""
+    }, _defineProperty(_ref, "receiver", ""), _defineProperty(_ref, "result_message", ""), _defineProperty(_ref, "num_inbox", 0), _defineProperty(_ref, "num_outbox", 0), _defineProperty(_ref, "unread", 0), _defineProperty(_ref, "sent_time", ""), _defineProperty(_ref, "display_detail", 0), _defineProperty(_ref, "message_id_detail", 0), _ref;
   },
   mounted: function mounted() {
     this.getinbox();
@@ -1989,9 +2001,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     get_in_out: function get_in_out() {
       var _this = this;
 
-      axios.get('/user/messages/total').then(function (response) {
-        console.log("total");
-        console.log(response.data);
+      axios.get("/user/messages/total").then(function (response) {
+        // console.log("total");
+        //  console.log(response.data);
         _this.num_inbox = response.data[0];
         _this.num_outbox = response.data[1];
       });
@@ -2001,9 +2013,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       this.display_form = 0;
       this.display_messages = 1;
-      axios.get('/user/messages/inbox').then(function (response) {
-        console.log("inbox");
-        console.log(response.data);
+      axios.get("/user/messages/inbox").then(function (response) {
+        // console.log("inbox");
+        //  console.log(response.data);
         _this2.list_messages = response.data;
       }); // this.getinbox();
     },
@@ -2015,19 +2027,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.ck_inbox = 1;
       this.ck_outbox = 0;
       this.get_unread();
-      axios.get('/user/messages/inbox').then(function (response) {
-        console.log("inbox");
-        console.log(response.data);
+      axios.get("/user/messages/inbox").then(function (response) {
         _this3.list_messages = response.data;
-        _this3.result_message = '';
+        _this3.result_message = "";
       });
     },
     get_unread: function get_unread() {
       var _this4 = this;
 
-      axios.get('/user/messages/unread').then(function (response) {
-        console.log("unread");
-        console.log(response.data);
+      axios.get("/user/messages/unread").then(function (response) {
         _this4.unread = response.data;
       });
     },
@@ -2038,20 +2046,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.display_messages = 1;
       this.ck_outbox = 1;
       this.ck_inbox = 0;
-      axios.get('/user/messages/outbox').then(function (response) {
-        console.log("outbox");
-        console.log(response.data);
+      axios.get("/user/messages/outbox").then(function (response) {
         _this5.list_messages = response.data;
-        _this5.result_message = '';
+        _this5.result_message = "";
       });
     },
     message_detail: function message_detail(message_id) {
       var _this6 = this;
 
       this.display_detail = 1;
-      axios.get('/user/messages/' + message_id + '/detail').then(function (response) {
-        console.log("outbox");
-        console.log(response.data);
+      axios.get("/user/messages/" + message_id + "/detail").then(function (response) {
         _this6.title = response.data[0].title;
         _this6.message = response.data[0].message;
         _this6.sent_time = response.data[0].created_at;
@@ -2067,36 +2071,30 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       this.display_form = 1;
       this.display_messages = 0;
-      axios.get('/user/messages/users').then(function (response) {
-        console.log("pick receiver");
-        console.log(response.data);
+      axios.get("/user/messages/users").then(function (response) {
         _this7.list_users = response.data;
-        _this7.result_message = '';
+        _this7.result_message = "";
       });
     },
     save_message: function save_message() {
       var _this8 = this;
 
-      console.log(this.receiver);
-      console.log(this.message_body);
-      console.log(this.message_title);
-      this.result_message = '';
+      this.result_message = "";
 
-      if (this.receiver == '' || this.message_body == '' || this.message_title == '') {
-        this.result_message = 'Please input info for all fields above';
+      if (this.receiver == "" || this.message_body == "" || this.message_title == "") {
+        this.result_message = "Please input info for all fields above";
       } else {
-        alert('OK');
-        axios.post('/user/messages/save', {
+        axios.post("/user/messages/save", {
           message: this.message_body,
           receiver_id: this.receiver,
           title: this.message_title
         }).then(function (response) {
           console.log("message save");
           console.log(response.data);
-          _this8.message_body = '';
-          _this8.message_title = '';
-          _this8.receiver = '';
-          _this8.result_message = 'Your message is sent!';
+          _this8.message_body = "";
+          _this8.message_title = "";
+          _this8.receiver = "";
+          _this8.result_message = "Your message is sent!";
 
           _this8.get_in_out();
         });
@@ -2106,13 +2104,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var _this9 = this;
 
       console.log("undisplay" + message_id);
-      axios.get('/user/messages/' + message_id + '/un_display').then(function (response) {
+      axios.get("/user/messages/" + message_id + "/un_display").then(function (response) {
         console.log("respon" + response.data);
         var ck_box = response.data;
-        console.log(response.data);
-        _this9.message_body = '';
-        _this9.message_title = '';
-        _this9.receiver = '';
+        _this9.message_body = "";
+        _this9.message_title = "";
+        _this9.receiver = "";
         _this9.display_detail = 0;
         if (ck_box == 1) _this9.getoutbox();else _this9.getinbox();
       });
@@ -37895,7 +37892,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: " d-flex justify-content-center my-2" }, [
+    _c("div", { staticClass: "d-flex justify-content-center my-2" }, [
       _c("ul", { staticClass: "list-inline" }, [
         _c(
           "li",
@@ -37903,31 +37900,31 @@ var render = function() {
             staticClass: "btn btn-primary list-inline-item",
             on: { click: _vm.getinbox }
           },
-          [_vm._v("Inbox(" + _vm._s(_vm.num_inbox) + ") ")]
+          [_vm._v("\n        Inbox(" + _vm._s(_vm.num_inbox) + ")\n      ")]
         ),
         _vm._v(" "),
         _c(
           "li",
           {
-            staticClass: "btn btn-primary  list-inline-item",
+            staticClass: "btn btn-primary list-inline-item",
             on: { click: _vm.getoutbox }
           },
-          [_vm._v("Outbox (" + _vm._s(_vm.num_outbox) + ")")]
+          [_vm._v("\n        Outbox (" + _vm._s(_vm.num_outbox) + ")\n      ")]
         ),
         _vm._v(" "),
         _c(
           "li",
           {
-            staticClass: "btn btn-primary  list-inline-item",
+            staticClass: "btn btn-primary list-inline-item",
             on: { click: _vm.sent_message }
           },
-          [_vm._v("New Message")]
+          [_vm._v("\n        New Message\n      ")]
         )
       ])
     ]),
     _vm._v(" "),
     _vm.display_messages == 1
-      ? _c("div", { staticClass: "row col-12 mx-auto border rounded " }, [
+      ? _c("div", { staticClass: "row col-12 mx-auto border rounded" }, [
           _c(
             "div",
             {
@@ -37959,18 +37956,14 @@ var render = function() {
                       }
                     }
                   },
-                  [
-                    _c("p", [_vm._v(" " + _vm._s(item.title) + " ")]),
-                    _vm._v(" "),
-                    _c("hr")
-                  ]
+                  [_c("p", [_vm._v(_vm._s(item.title))]), _vm._v(" "), _c("hr")]
                 )
               })
             ],
             2
           ),
           _vm._v(" "),
-          _c("div", { staticClass: "col-8 border border-primary " }, [
+          _c("div", { staticClass: "col-8 border border-primary" }, [
             _vm.display_detail == 1
               ? _c("div", [
                   _c("h5", { staticClass: "text-break" }, [
@@ -37988,7 +37981,7 @@ var render = function() {
                   _c("p", [_vm._v(_vm._s(_vm.sent_time))]),
                   _vm._v(" "),
                   _vm.ck_inbox == 1
-                    ? _c("p", [_vm._v(" " + _vm._s(_vm.sender))])
+                    ? _c("p", [_vm._v(_vm._s(_vm.sender))])
                     : _vm._e(),
                   _vm._v(" "),
                   _vm.ck_outbox == 1
@@ -38048,7 +38041,11 @@ var render = function() {
                 return _c(
                   "option",
                   { key: index, domProps: { value: item.id } },
-                  [_vm._v(_vm._s(item.username))]
+                  [
+                    _vm._v(
+                      "\n          " + _vm._s(item.username) + "\n        "
+                    )
+                  ]
                 )
               }),
               0
@@ -38120,7 +38117,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("p", { staticClass: "text-danger" }, [
-              _vm._v(_vm._s(_vm.result_message) + " ")
+              _vm._v(_vm._s(_vm.result_message))
             ])
           ])
         ])

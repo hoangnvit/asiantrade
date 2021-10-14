@@ -164,13 +164,13 @@ function toggle_message(){
 function send(){
 
   event.preventDefault();
-  console.log("Send clicked");
+  // console.log("Send clicked");
   title=$('#title').val();
   message=$('#message').val();
   receiver_id=$('#receiver_id').val();
-  console.log(title);
-  console.log(message);
-  console.log(receiver_id);
+  // console.log(title);
+  // console.log(message);
+  // console.log(receiver_id);
   if((title.length>10)&& (message.length>10)) {
 
   $.ajaxSetup({
