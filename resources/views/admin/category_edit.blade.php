@@ -26,10 +26,20 @@
         <div class="row mt-3">
             <label class="col-5" for="active" :value="__('Active')"> Active Status</label>
             <div class="col-8">
-                <input id="active" class="block mt-1 w-full" type="radio" name="active" value=1 {{ $cat_detail['active'] === 1 ? "checked" : "Goodbye" }} />
+            @if ($cat_detail['active'] === 1)
+   
+                <input id="active" class="block mt-1 w-full" type="radio" name="active" value=1 checked />
                 <label for="active"> Active</label>
-                <input id="admin" class="block mt-1 w-full" type="radio" name="active" value=0 {{ $cat_detail['active'] === 0 ? "checked" : "Goodbye" }} />
+                <input id="admin" class="block mt-1 w-full" type="radio" name="active" value=0  />
                 <label for="unactive"> Un-Active</label>
+            @else
+                <input id="active" class="block mt-1 w-full" type="radio" name="active" value=1 />
+                <label for="active"> Active</label>
+                <input id="admin" class="block mt-1 w-full" type="radio" name="active" value=0 checked />
+                <label for="unactive"> Un-Active</label>
+
+
+            @endif
             </div>
         </div>
         <div class="row justify-content-center">
