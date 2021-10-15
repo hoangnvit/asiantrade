@@ -70,7 +70,7 @@
                 </td> -->
         <td class="col-1">
                     <!-- {{$user['avatar']}} -->
-                    <img class="cat_avatar_table" src="{{asset('uploads/images/'. $user['avatar'])}}" alt="">
+                    <img class="cat_avatar_table" src="{{$user['avatar']}}" alt="">
                 </td>
         <!-- <td class="col-1">
             {{$user['postalcode']}}
