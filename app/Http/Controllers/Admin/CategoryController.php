@@ -60,7 +60,7 @@ class CategoryController extends Controller
                 // $avatar = "$profileImage";
                 $uploadedFileUrl = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
                 $avatar=$uploadedFileUrl;
-            } else $avatar = "cat_avatar_default.png";
+            } else $avatar = asset('uploads/images/cat_avatar_default.png');
 
             $category = Category::create(
                 [
