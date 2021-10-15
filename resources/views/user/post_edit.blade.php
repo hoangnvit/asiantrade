@@ -61,11 +61,22 @@
 
 
         <div class="row mt-2">
-            <label class="col-3" for="active" :value="__('Active')"> Active Status</label>
 
-            <input id="active" class="block mt-1 w-full" type="radio" name="status" value=1 {{ $post_detail['status'] === 1 ? "checked" : "Goodbye" }} />
+
+            <label class="col-3" for="active" :value="__('Active')"> Active Status</label>
+            @if($post_detail['status'] == 1)
+            <input id="active" class="block mt-1 w-full" type="radio" name="status" value=1 checked />
+            @else
+            <input id="active" class="block mt-1 w-full" type="radio" name="status" value=1 />
+            @endif
+
             <label for="unactive" class="col-2"> Active</label>
-            <input id="unactive" class="block mt-1 w-full" type="radio" name="status" value=0 {{ $post_detail['status'] === 0 ? "checked" : "Goodbye" }} />
+            @if($post_detail['status'] == 1)
+            <input id="unactive" class="block mt-1 w-full" type="radio" name="status" value=0 />
+            @else
+            <input id="unactive" class="block mt-1 w-full" type="radio" name="status" value=0 checked />
+            @endif
+
             <label for="unactive"> Un-Active</label>
         </div>
         <div>
