@@ -54,10 +54,12 @@ class CategoryController extends Controller
         try {
 
             if ($image = $request->file('image')) {
-                $destinationPath = 'uploads/images/';
-                $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-                $image->move($destinationPath, $profileImage);
-                $avatar = "$profileImage";
+                // $destinationPath = 'uploads/images/';
+                // $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+                // $image->move($destinationPath, $profileImage);
+                // $avatar = "$profileImage";
+                $uploadedFileUrl = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
+                $avatar=$uploadedFileUrl;
             } else $avatar = "cat_avatar_default.png";
 
             $category = Category::create(
