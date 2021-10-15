@@ -153,7 +153,7 @@ class UserController extends Controller
                     'address' => $request->address,
                     'postalcode' => $request->postalcode,
                     'admin' => $request->admin,
-                    'avatar' => 'avatar_default_1628460128.png',
+                    'avatar' => asset('uploads/images/cat_avatar_default.png'),
 
                     'email' => $request->email,
                     'password' => Hash::make($request->password),

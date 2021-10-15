@@ -44,7 +44,7 @@
         </div>
         <div class="row justify-content-center">
 
-            <figure> <img class="cat_avatar" src="{{asset('uploads/images/'. $cat_detail['avatar'])}}" alt="">
+            <figure> <img class="cat_avatar" src="{{$cat_detail['avatar']}}" alt="">
                 <figcaption> A pink flamingo.</figcaption>
             </figure>
 

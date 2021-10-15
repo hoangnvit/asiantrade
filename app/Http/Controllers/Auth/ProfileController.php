@@ -49,10 +49,11 @@ class ProfileController extends Controller
         );
         $user = auth()->user();
         if ($image = $request->file('image')) {
-            $destinationPath = 'uploads/images/';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
-            $avatar = "$profileImage";
+            // $destinationPath = 'uploads/images/';
+            // $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            // $image->move($destinationPath, $profileImage);
+            // $avatar = "$profileImage";
+            $avatar = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
         } else $avatar =  $user['avatar'];
 
         // $user = auth()->user();

@@ -21,7 +21,7 @@
             @if(@empty($user['avatar']))
             <img class='user_avatar' src="{{asset('images/avatar_default.png')}}" alt="default avatar">
             @else
-            <img class='user_avatar' src="{{asset('uploads/images/'. $user['avatar'])}}" alt=" image default">
+            <img class='user_avatar' src="{{$user['avatar']}}" alt=" image default">
             @endif
 
 
