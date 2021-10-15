@@ -62,11 +62,12 @@ class PostController extends Controller
             $user = auth()->user();
 
             if ($image = $request->file('image')) {
-                $destinationPath = 'uploads/images/';
-                $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-                $image->move($destinationPath, $profileImage);
-                $avatar = "$profileImage";
-            } else $avatar = "cat_avatar_default.png";
+                // $destinationPath = 'uploads/images/';
+                // $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+                // $image->move($destinationPath, $profileImage);
+                // $avatar = "$profileImage";
+                $avatar = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
+            } else $avatar = asset('uploads/images/cat_avatar_default.png');
 
             $post = Post::create(
                 [
@@ -150,10 +151,11 @@ class PostController extends Controller
 
 
             if ($image = $request->file('image')) {
-                $destinationPath = 'uploads/images/';
-                $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-                $image->move($destinationPath, $profileImage);
-                $avatar = "$profileImage";
+                // $destinationPath = 'uploads/images/';
+                // $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+                // $image->move($destinationPath, $profileImage);
+                // $avatar = "$profileImage";
+                $avatar = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
             } else $avatar = $post['avatar'];
 
 

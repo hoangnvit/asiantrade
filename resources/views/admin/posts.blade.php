@@ -60,7 +60,7 @@
         </td>
 
         <td class="col-1">
-            <img class="cat_avatar_table" src="{{asset('uploads/images/'. $post['avatar'])}}" alt="">
+            <img class="cat_avatar_table" src="{{$post['avatar']}}" alt="">
         </td>
         <td class="col-1">
             {{$post['price']}}

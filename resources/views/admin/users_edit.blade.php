@@ -99,7 +99,7 @@
 
         <div class="col-4">
 
-            <img class='user_avatar' src="{{asset('uploads/images/'. $user_detail['avatar'])}}" alt=" image default">
+            <img class='user_avatar' src="{{$user_detail['avatar']}}" alt=" image default">
         </div>
         <div>
             <input type="file" name="image" class="form-control mt-2">
