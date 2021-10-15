@@ -72,10 +72,11 @@ class UserController extends Controller
         try {
             $user = User::find($request['id']);
             if ($image = $request->file('image')) {
-                $destinationPath = 'uploads/images/';
-                $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-                $image->move($destinationPath, $profileImage);
-                $avatar = "$profileImage";
+                // $destinationPath = 'uploads/images/';
+                // $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+                // $image->move($destinationPath, $profileImage);
+                // $avatar = "$profileImage";
+                $avatar = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
             } else $avatar = $user['avatar'];
 
 
