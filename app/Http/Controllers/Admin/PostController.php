@@ -67,7 +67,7 @@ class PostController extends Controller
                 // $image->move($destinationPath, $profileImage);
                 // $avatar = "$profileImage";
                 $avatar = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
-            } else $avatar = asset('uploads/images/cat_avatar_default.png');
+            } else $avatar = 'https://res.cloudinary.com/dqa0rpdvp/image/upload/v1634292704/psruvyrtsmshsobug29c.jpg';
 
             $post = Post::create(
                 [
