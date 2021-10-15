@@ -22,7 +22,7 @@
         <div class="row">
             <x-label class="col-4" for="title" :value="__('Title')" />
 
-            <x-input id="title" class="block mt-1 w-full" type="text" name="title" :value="old('title')" required autofocus />
+            <x-input id="title" class="mt-1 w-full" type="text" name="title" :value="old('title')" required autofocus />
         </div>
         <div class="row mt-2">
             <x-label class='col-4' for="description" :value="__('Description')" />
@@ -42,7 +42,7 @@
         <div class="row mt-2">
 
             <x-label class="col-4" for="price" :value="__('Price')" />
-            <x-input id="price" class="block mt-1 w-full" type="text" name="price" :value="old('price')" required />
+            <x-input id="price" class=" mt-1 w-full" type="text" name="price" :value="old('price')" required />
         </div>
         <div class="row mt-2">
             <x-label class="col-4" for="category_id" :value="__('Category')" />
