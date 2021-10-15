@@ -18,7 +18,7 @@
 	<a href="{{route('cat_posts',$cat->id)}}">
 		<div class='cat_block'>
 
-			<img src="{{asset('uploads/images/'. $cat->avatar)}}">
+			<img src="$cat->avatar}}">
 
 			<h3> {{$cat->name}}</h3>
 		</div>

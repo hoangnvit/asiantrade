@@ -15,7 +15,7 @@
 			  <div class='col-4 border text-center' >
 					  
 					
-							  <img class='product_avatar ' src="{{asset('uploads/images/'. $post['avatar'])}}"alt='picture of product'>
+							  <img class='product_avatar ' src="{{$post['avatar']}}"alt='picture of product'>
 							  <br/>
 					  <h5 class='text-primary'>{{$post['price']}}&#36;</h5>
 					  @if($action==1)

@@ -72,7 +72,7 @@
 
             <div class="row mt-2">
                 <label for="image" class="col-3"> Avatar</label>
-                <img class="cat_avatar" src="{{asset('uploads/images/'. $post_detail['avatar'])}}" alt="">
+                <img class="cat_avatar" src="{{$post_detail['avatar']}}" alt="">
                 <input type="file" name="image" class="form-control mt-2">
             </div>
 
