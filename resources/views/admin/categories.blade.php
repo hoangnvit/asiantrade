@@ -44,7 +44,7 @@
             {{$cat['name']}}
         </td>
         <td class="col-1">
-            <img class="cat_avatar_table" src="{{asset('uploads/images/'. $cat['avatar'])}}" alt="">
+            <img class="cat_avatar_table" src="{{ $cat['avatar']}}" alt="">
         </td>
 
 
