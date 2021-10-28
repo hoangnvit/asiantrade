@@ -92,7 +92,7 @@ function like(commentId){
       
       url: url,
       type: "GET",
-      data: {comment_id:commentId},
+      // data: {comment_id:commentId},
       success: function(response) {
         console.log(response);
           if(response[0]==0) alert("You liked already!");
