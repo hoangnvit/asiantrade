@@ -93,7 +93,7 @@ Route::get('/comment/delete/{comment_id}', 'App\Http\Controllers\User\CommentCon
 
 // Route for like comment
 
-Route::get('/comment/like/{comment_id}', 'App\Http\Controllers\User\LikeController@like')->name('comment.like');
+Route::get('/comment/like/', 'App\Http\Controllers\User\LikeController@like')->name('comment.like');
 
 // route get login stt 
 Route::get('/user/stt', [App\Http\Controllers\User\SttController::class, 'get_stt'])->name('stt');
