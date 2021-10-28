@@ -87,7 +87,7 @@ function like(commentId){
   $.ajax({
       
       
-      url: '{{ URL::route('comment.like', ':commentId') }}',
+      url: "{{ route('comment.like') }}" + '/' + commentId,
       type: "GET",
       data: {comment_id:commentId},
       success: function(response) {
