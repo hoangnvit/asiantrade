@@ -15,7 +15,7 @@ class LikeController extends Controller
     public function like(Request $request)
     {
 
-        try {
+        // try {
 
             $success = 1;
 
@@ -32,8 +32,8 @@ class LikeController extends Controller
             } else $success = 2;
 
             return [$success];
-        } catch (\Illuminate\Database\QueryException $ex) {
-            return view('errors');
-        }
+        // } catch (\Illuminate\Database\QueryException $ex) {
+        //     return view('errors');
+        // }
     }
 }
