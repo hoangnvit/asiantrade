@@ -83,11 +83,14 @@
 function like(commentId){
 
   console.log(commentId);
+  var url = '{{ route("omment.like", "commentId") }}';
+     url = url.replace("commentId",commentId);
 
   $.ajax({
       
+   
       
-      url: '{{ URL::route('comment.like', 'commentId') }}',
+      url: url,
       type: "GET",
       data: {comment_id:commentId},
       success: function(response) {
