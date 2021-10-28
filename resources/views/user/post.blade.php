@@ -83,7 +83,7 @@
 function like(commentId){
 
   console.log(commentId);
-  var url = '{{ route("omment.like", "commentId") }}';
+  var url = '{{ route("comment.like", "commentId") }}';
      url = url.replace("commentId",commentId);
 
   $.ajax({
