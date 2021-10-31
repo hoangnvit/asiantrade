@@ -179,7 +179,7 @@ class PostController extends Controller
         $id = request('post_id');
         
 
-        try {
+        // try {
             $post_delete = Post::find($id);
           
             $user = auth()->user();
@@ -198,10 +198,10 @@ class PostController extends Controller
                 
                   
                      $r['del_num']=$temp;
-                    //  return $r;
-                    return  $r->save();
+                
+                     $r->save();
                      
-                    
+                    return $r;
                
 
                 return redirect()->route('user_posts', $user['id']);
