@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\CommentLike;
 use App\Models\Comment;
-
+use Teapot\StatusCode\All;
 
 class LikeController extends Controller
 {
@@ -16,6 +16,8 @@ class LikeController extends Controller
     {
         
         // try {
+            $like=CommentLike::all();
+            return $like;
 
             $success = 1;
 
