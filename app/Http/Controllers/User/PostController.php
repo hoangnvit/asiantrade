@@ -199,7 +199,7 @@ class PostController extends Controller
                   
                      $r['del_num']=$temp;
                 
-                    //  $r->save();
+                     $r->save();
                      
                     return $r;
                
