@@ -177,10 +177,11 @@ class PostController extends Controller
     {
         // $post = Post::find($request['post_id']);
         $id = request('post_id');
-        return $id;
+        
 
         try {
             $post_delete = Post::find($id);
+            return $post_delete;
             $user = auth()->user();
 
             // if ($user['id'] == $post_delete['user_id']) {
