@@ -199,17 +199,7 @@ class PostController extends Controller
                   
                      $r['del_num']=$temp;
                     //  return $r;
-                    $r1 = Reason::create(
-                        [
-                            'reason' => "AAAAAAAAAA",
-                            'del_num' => 1,
-                            'dis_num' => 1,
-                            
-        
-        
-                        ]
-        
-                    );
+                    return  $r->save();
                      
                     
                
