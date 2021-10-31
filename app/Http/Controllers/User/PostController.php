@@ -193,7 +193,7 @@ class PostController extends Controller
                
                 $r=Reason::find($reason_id);
                
-
+                return $r;
                 if(is_null($r['del_num'])) $temp=1;
                 else  $temp=$r['del_num']+1;
                 
@@ -201,7 +201,7 @@ class PostController extends Controller
                 $r['del_num']=$temp;
                 
                  $r->save();
-                return $r;
+               
 
                 return redirect()->route('user_posts', $user['id']);
             } else return redirect()->route('home');
