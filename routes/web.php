@@ -98,7 +98,7 @@ Route::get('/comment/delete/{comment_id}', 'App\Http\Controllers\User\CommentCon
 Route::get('/comment/like/{comment_id}', 'App\Http\Controllers\User\LikeController@like')->name('comment.like');
 
 // route get login stt 
-Route::get('/user/stt', [App\Http\Controllers\User\SttControll:er:class, 'get_stt'])->name('stt');
+Route::get('/user/stt', [App\Http\Controllers\User\SttController::class, 'get_stt'])->name('stt');
 
 // route manage post by user
 // Route::get('','App\Http\Controllers\User\PostController@comment_edit')->name('user_delete_post');
