@@ -14,7 +14,7 @@ class LikeController extends Controller
 {
     public function like(Request $request)
     {
-
+         return $request->comment_id;
         // try {
 
             $success = 1;
