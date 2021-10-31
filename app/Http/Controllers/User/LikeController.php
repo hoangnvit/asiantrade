@@ -17,7 +17,7 @@ class LikeController extends Controller
         
         // try {
             $like=CommentLike::all();
-            return $like;
+           
 
             $success = 1;
 
