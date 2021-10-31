@@ -187,7 +187,7 @@ class PostController extends Controller
             if ($user['id'] == $post_delete['user_id']) {
 
 
-                $post_delete->delete();
+                // $post_delete->delete();
                 
                 $reason_id = request('reason_id');
                
