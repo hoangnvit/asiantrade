@@ -14,6 +14,7 @@ class CreateCommentLikesTable extends Migration
     public function up()
     {
         Schema::create('comment_likes', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('comment_id');
            $table->integer('user_id');
           
