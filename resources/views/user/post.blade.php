@@ -94,7 +94,7 @@ function like(commentId){
       type: "GET",
       // data: {comment_id:commentId},
       success: function(response) {
-        console.log(response);
+        console.log("spne"+response);
           if(response[0]==0) alert("You liked already!");
           else if(response[0]==1){
 
