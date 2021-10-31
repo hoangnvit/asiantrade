@@ -154,7 +154,7 @@ class UserController extends Controller
                     'address' => $request->address,
                     'postalcode' => $request->postalcode,
                     'admin' => $request->admin,
-                    'avatar' => asset('uploads/images/cat_avatar_default.png'),
+                    'avatar' => 'http://asiantrade.herokuapp.com/uploads/images/cat_avatar_default.png',
 
                     'email' => $request->email,
                     'password' => Hash::make($request->password),

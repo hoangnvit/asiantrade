@@ -49,7 +49,7 @@ class RegisteredUserController extends Controller
             'fname' => $request->fname,
             'address' => $request->address,
             'postalcode' => $request->postalcode,
-            'avatar' =>  asset('images/avatar_default_1628460128.png'),
+            'avatar' =>  'http://asiantrade.herokuapp.com/uploads/images/cat_avatar_default.png',
 
 
             'email' => $request->email,
