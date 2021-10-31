@@ -206,9 +206,9 @@ class PostController extends Controller
 
                 return redirect()->route('user_posts', $user['id']);
             } else return redirect()->route('home');
-        } catch (\Illuminate\Database\QueryException $ex) {
-            return view('errors');
-        }
+        // } catch (\Illuminate\Database\QueryException $ex) {
+        //     return view('errors');
+        // }
     }
 
 
