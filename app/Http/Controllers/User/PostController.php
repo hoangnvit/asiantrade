@@ -190,8 +190,9 @@ class PostController extends Controller
                 $post_delete->delete();
                 
                 $reason_id = request('reason_id');
-                return $reason_id;
+               
                 $r=Reason::find($reason_id);
+                return $r['del_num'];
 
                 if(is_null($r['del_num'])) $temp=1;
                 else  $temp=$r['del_num']+1;
