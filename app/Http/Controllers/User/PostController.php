@@ -197,9 +197,11 @@ class PostController extends Controller
                 if(is_null($r['del_num'])) $temp=1;
                 else  $temp=$r['del_num']+1;
                 
-                return $temp;
+               
                 $r['del_num']=$temp;
-                $result = $r->save();
+                
+                 $r->save();
+                return $r;
 
                 return redirect()->route('user_posts', $user['id']);
             } else return redirect()->route('home');
