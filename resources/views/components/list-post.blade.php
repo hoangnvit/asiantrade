@@ -20,7 +20,7 @@
 					  <h5 class='text-primary'>{{$post['price']}}&#36;</h5>
 					  @if($action==1)
 							  <a class="button btn-primary border rounded mx-1 my-1 p-1" href="{{route('user_posts_detail',['user_id'=>$post->user->id,'post_id'=>$post['id']])}}">EDIT</a>
-							  <a class="button btn-primary border rounded mx-1 my-1 p-1" href="{{route('user_posts_detail',['user_id'=>$post->user->id,'post_id'=>$post['id']])}}">DELETE</a>
+							  <a class="button btn-primary border rounded mx-1 my-1 p-1" href="{{route('user_posts_delete_form',['user_id'=>$post->user->id,'post_id'=>$post['id']])}}">DELETE</a>
                    				 <!-- <a  id="btn_delete" class="button btn-primary border rounded p-1" onclick="return confirm('Are you sure?')" href="{{route('user_posts_delete',['user_id'=>$post['user_id'], 'post_id'=>$post['id']])}}">DELETE <i class="fa fa-trash"></i></a> -->
                        
 					 @endif
