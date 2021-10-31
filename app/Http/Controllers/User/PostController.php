@@ -181,7 +181,7 @@ class PostController extends Controller
 
         try {
             $post_delete = Post::find($id);
-            return $post_delete;
+          
             $user = auth()->user();
 
             if ($user['id'] == $post_delete['user_id']) {
