@@ -29,7 +29,7 @@ class LikeController extends Controller
                 if ($like_check->count() === 0) {
                     
                     $like = CommentLike::create(['user_id' => Auth::user()->id, 'comment_id' => $request->comment_id]);
-                    return $like;
+                   
                 } else $success = 0;
                 $comment = Comment::find($request->comment_id);
                 $count = $comment->likes->count();
