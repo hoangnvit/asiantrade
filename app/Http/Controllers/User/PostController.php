@@ -177,6 +177,7 @@ class PostController extends Controller
     {
         // $post = Post::find($request['post_id']);
         $id = request('post_id');
+        return $id;
 
         try {
             $post_delete = Post::find($id);
@@ -185,7 +186,7 @@ class PostController extends Controller
             // if ($user['id'] == $post_delete['user_id']) {
 
 
-               
+                $post_delete->delete();
 
                 $reason_id = request('reason_id');
                 $r=Reason::find($reason_id);
@@ -197,7 +198,7 @@ class PostController extends Controller
                 $result = $r->save();
 
 
-                $post_delete->delete();
+
 
                 return redirect()->route('user_posts', $user['id']);
             // } else return redirect()->route('home');
