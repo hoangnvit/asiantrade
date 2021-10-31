@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Reason extends Model
 {
     use HasFactory;
+    public $timestamps = false;
     protected $fillable = ['reason', 'del_num','dis_num'];
 }
