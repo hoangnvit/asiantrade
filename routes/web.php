@@ -80,7 +80,7 @@ Route::get('/post/detail/{post_id}', [App\Http\Controllers\User\PostController::
 Route::get('/post/create', [App\Http\Controllers\User\PostController::class, 'create'])->middleware('auth')->name('new_post');
 Route::post('/post/create', [App\Http\Controllers\User\PostController::class, 'post_store'])->middleware('auth')->name('user_post_store');
 Route::get('/post/user/{user_id}', [App\Http\Controllers\User\PostController::class, 'postsbyuser'])->middleware('auth')->name('user_posts');
-Route::get('/post/user/{user_id}/{post_id}', [App\Http\Controllers\User\PostController::class, 'post_delete'])->middleware('auth')->name('user_posts_delete');
+Route::post('/post/user/{user_id}/{post_id}', [App\Http\Controllers\User\PostController::class, 'post_delete'])->middleware('auth')->name('user_posts_delete');
 Route::get('/post/user/{user_id}/post/{post_id}', [App\Http\Controllers\User\PostController::class, 'post_detail'])->middleware('auth')->name('user_posts_detail');
 Route::get('/post/user/{user_id}/post/{post_id}/delete', [App\Http\Controllers\User\PostController::class, 'post_delete_form'])->middleware('auth')->name('user_posts_delete_form');
 Route::post('/post/user/{user_id}/post/{post_id}', [App\Http\Controllers\User\PostController::class, 'post_edit'])->middleware('auth')->name('user_post_edit');
@@ -98,7 +98,7 @@ Route::get('/comment/delete/{comment_id}', 'App\Http\Controllers\User\CommentCon
 Route::get('/comment/like/{comment_id}', 'App\Http\Controllers\User\LikeController@like')->name('comment.like');
 
 // route get login stt 
-Route::get('/user/stt', [App\Http\Controllers\User\SttController::class, 'get_stt'])->name('stt');
+Route::get('/user/stt', [App\Http\Controllers\User\SttControll:er:class, 'get_stt'])->name('stt');
 
 // route manage post by user
 // Route::get('','App\Http\Controllers\User\PostController@comment_edit')->name('user_delete_post');
