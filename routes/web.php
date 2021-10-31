@@ -76,11 +76,13 @@ Route::get('/admin/usage', [App\Http\Controllers\Admin\StatisticController::clas
 //route for homepage
 Route::get('/{cat_id}/post', [App\Http\Controllers\User\PostController::class, 'postsbycategory'])->name('cat_posts');
 Route::get('/post/detail/{post_id}', [App\Http\Controllers\User\PostController::class, 'detail'])->name('post');
+
 Route::get('/post/create', [App\Http\Controllers\User\PostController::class, 'create'])->middleware('auth')->name('new_post');
 Route::post('/post/create', [App\Http\Controllers\User\PostController::class, 'post_store'])->middleware('auth')->name('user_post_store');
 Route::get('/post/user/{user_id}', [App\Http\Controllers\User\PostController::class, 'postsbyuser'])->middleware('auth')->name('user_posts');
 Route::get('/post/user/{user_id}/{post_id}', [App\Http\Controllers\User\PostController::class, 'post_delete'])->middleware('auth')->name('user_posts_delete');
 Route::get('/post/user/{user_id}/post/{post_id}', [App\Http\Controllers\User\PostController::class, 'post_detail'])->middleware('auth')->name('user_posts_detail');
+Route::get('/post/user/{user_id}/post/{post_id}/delete', [App\Http\Controllers\User\PostController::class, 'post_delete_form'])->middleware('auth')->name('user_posts_delete_form');
 Route::post('/post/user/{user_id}/post/{post_id}', [App\Http\Controllers\User\PostController::class, 'post_edit'])->middleware('auth')->name('user_post_edit');
 Route::get('/post/search', [App\Http\Controllers\User\PostController::class, 'search'])->name('search');
 Route::post('/post/search1', [App\Http\Controllers\User\PostController::class, 'search_post'])->name('search_result');

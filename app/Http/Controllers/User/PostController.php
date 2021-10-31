@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
+use App\Models\Reason;
 use Illuminate\Http\Request;
 use PhpParser\Node\Stmt\Return_;
 
@@ -174,7 +175,9 @@ class PostController extends Controller
 
     public function post_delete(Request $request)
     {
+        // $post = Post::find($request['post_id']);
         $id = request('post_id');
+
         try {
             $post_delete = Post::find($id);
             $user = auth()->user();
@@ -183,6 +186,16 @@ class PostController extends Controller
 
 
                 $post_delete->delete();
+
+                $reason_id = request('reason_id');
+                $r=Reason::find($reason_id);
+                if(is_null($r['del_num'])) $r['del_num']=1;
+                else $r['del_num']++;
+                $result = $r->save();
+
+
+
+
                 return redirect()->route('user_posts', $user['id']);
             } else return redirect()->route('home');
         } catch (\Illuminate\Database\QueryException $ex) {
@@ -264,5 +277,18 @@ class PostController extends Controller
         } catch (\Illuminate\Database\QueryException $ex) {
             return view('errors');
         }
+    }
+
+
+    public function post_delete_form(Request $request){
+       
+        $post = Post::find($request['post_id']);
+        $reasons=Reason::all();
+
+
+        return view('user.post_delete')->with('post', $post)->with('reasons', $reasons);
+
+        
+
     }
 }
