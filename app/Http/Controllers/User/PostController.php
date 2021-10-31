@@ -184,7 +184,7 @@ class PostController extends Controller
             return $post_delete;
             $user = auth()->user();
 
-            // if ($user['id'] == $post_delete['user_id']) {
+            if ($user['id'] == $post_delete['user_id']) {
 
 
                 $post_delete->delete();
@@ -202,7 +202,7 @@ class PostController extends Controller
 
 
                 return redirect()->route('user_posts', $user['id']);
-            // } else return redirect()->route('home');
+            } else return redirect()->route('home');
         } catch (\Illuminate\Database\QueryException $ex) {
             return view('errors');
         }
