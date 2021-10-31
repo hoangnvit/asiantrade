@@ -49,7 +49,7 @@ class RegisteredUserController extends Controller
             'fname' => $request->fname,
             'address' => $request->address,
             'postalcode' => $request->postalcode,
-            'avatar' => 'avatar_default_1628460128.png',
+            'avatar' =>  asset('avatar_default_1628460128.png'),
 
 
             'email' => $request->email,

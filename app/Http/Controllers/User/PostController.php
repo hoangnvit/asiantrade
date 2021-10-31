@@ -199,7 +199,7 @@ class PostController extends Controller
                   
                      $r['del_num']=$temp;
                     //  return $r;
-                    return  $r->save();
+                    Reason::where('id', $reason_id)->update(['del_num'=>$temp]);
                      
                     
                
