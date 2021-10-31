@@ -198,10 +198,10 @@ class PostController extends Controller
                 
                   
                      $r['del_num']=$temp;
-                
+                     return $r;
                      $r->save();
                      
-                    return $r;
+                    
                
 
                 return redirect()->route('user_posts', $user['id']);
