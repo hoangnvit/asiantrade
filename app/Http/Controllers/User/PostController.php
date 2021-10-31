@@ -199,7 +199,17 @@ class PostController extends Controller
                   
                      $r['del_num']=$temp;
                     //  return $r;
-                    Reason::where('id', $reason_id)->update(['del_num'=>$temp]);
+                    $r1 = Reason::create(
+                        [
+                            'reason' => "AAAAAAAAAA",
+                            'del_num' => 1,
+                            'dis_num' => 1,
+                            
+        
+        
+                        ]
+        
+                    );
                      
                     
                
