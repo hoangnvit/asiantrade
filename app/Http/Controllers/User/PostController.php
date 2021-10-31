@@ -201,7 +201,7 @@ class PostController extends Controller
                 
                      $r->save();
                      
-                    return $r;
+                    // return $r;
                
 
                 return redirect()->route('user_posts', $user['id']);
