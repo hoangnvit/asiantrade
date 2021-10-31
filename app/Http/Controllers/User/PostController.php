@@ -187,8 +187,8 @@ class PostController extends Controller
             if ($user['id'] == $post_delete['user_id']) {
 
 
-               $result= $post_delete->delete();
-                return $result;
+                $post_delete->delete();
+                
                 $reason_id = request('reason_id');
                 $r=Reason::find($reason_id);
 
@@ -197,9 +197,6 @@ class PostController extends Controller
 
                 $r['del_num']=$temp;
                 $result = $r->save();
-
-
-
 
                 return redirect()->route('user_posts', $user['id']);
             } else return redirect()->route('home');
