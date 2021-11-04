@@ -13,7 +13,9 @@
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
     <!-- Validation Errors -->
+    <div class="col-md-12">
     <x-auth-validation-errors class="mb-4" :errors="$errors" />
+    </div>
     <br />
 
     <form method="POST" action="{{ route('login') }}" class='border border-1 p-5 rounded mx-2'>
