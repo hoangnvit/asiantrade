@@ -14,11 +14,11 @@
 
     <!-- Validation Errors -->
     
-    <x-auth-validation-errors class="mb-4 col-12" :errors="$errors" />
+    <x-auth-validation-errors class="mb-4 col-md-12" :errors="$errors" />
     
     <br />
 
-    <form method="POST" action="{{ route('login') }}" class='border border-1 p-5 rounded mx-2 col-12'>
+    <form method="POST" action="{{ route('login') }}" class='border border-1 p-5 rounded mx-2'>
         @csrf
 
         <!-- Email Address -->
