@@ -21,9 +21,6 @@ Route::get('/', [App\Http\Controllers\User\HomeController::class, 'index'])->nam
 // })->middleware(['auth'])->name('dashboard');
 
 
-Route::any('(:any)/(:all?)', function () {
-   return  redirect()->route('home');
-});
 
 require __DIR__ . '/auth.php';
 
