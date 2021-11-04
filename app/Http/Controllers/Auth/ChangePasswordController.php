@@ -50,7 +50,7 @@ class ChangePasswordController extends Controller
         if (Hash::check($request->oldpassword, $user['password'])) {
             $user['password'] = Hash::make($request->password);
             $user->save();
-            redirect()->route('home');
+             return redirect()->route('home');
         } else
 
             return view('auth.change-password')->with('stt', 'Wrong old Password');
