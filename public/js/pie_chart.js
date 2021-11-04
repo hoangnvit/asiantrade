@@ -197,4 +197,116 @@ $.ajax({
     }
 })
 
+
+
+//Pie chart for posts by categories
+$.ajax({
+    method: 'GET',
+    url: 'usage/pie_chart',
+    success: function (data) {
+       console.log("AAA"+data);
+       data = JSON.parse(data);
+
+    
+        chart2= new Highcharts.chart('pie-chart', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Posts by Category'
+            },
+            subtitle: {
+                text: 'Source: Asiantrade.com'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                    }
+                }
+            },
+            series: [{
+                name: 'Categories',
+                colorByPoint: true,
+                data: data
+            }]
+        });
+    
+    },
+    error: function (error) {
+        console.log('error');
+    }
+})
+
+
+
+//Chart3 
+
+//Pie chart for posts by categories
+$.ajax({
+    method: 'GET',
+    url: 'usage/pie_chart_delete_reason',
+    success: function (data) {
+       console.log("AAA"+data);
+       data = JSON.parse(data);
+
+    
+        chart2= new Highcharts.chart('pie-chart-delete', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Posts by Category'
+            },
+            subtitle: {
+                text: 'Source: Asiantrade.com'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                    }
+                }
+            },
+            series: [{
+                name: 'Categories',
+                colorByPoint: true,
+                data: data
+            }]
+        });
+    
+    },
+    error: function (error) {
+        console.log('error');
+    }
+})
+
 });

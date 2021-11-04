@@ -15,6 +15,10 @@
                 <br>
                 <div id="pie-chart"></div>
                 <br>
+
+                <br>
+                <div id="pie-chart-delete"></div>
+                <br>
             </div>
 
 @endsection

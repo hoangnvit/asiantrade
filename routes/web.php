@@ -67,8 +67,10 @@ Route::post('/admin/posts/post/{i}', [App\Http\Controllers\Admin\PostController:
 
 //route for usage page
 Route::get('/admin/usage/pie_chart', [App\Http\Controllers\Admin\StatisticController::class, 'category']);
+Route::get('/admin/usage/pie_chart_delete', [App\Http\Controllers\Admin\StatisticController::class, 'reason']);
 Route::get('/admin/usage/user_line_chart', [App\Http\Controllers\Admin\StatisticController::class, 'new_users']);
 Route::get('/admin/usage/post_line_chart', [App\Http\Controllers\Admin\StatisticController::class, 'new_posts']);
+
 Route::get('/admin/usage', [App\Http\Controllers\Admin\StatisticController::class, 'index'])->name('admin_statistic');
 
 

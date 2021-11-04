@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Category;
+use App\Models\Reason;
 
 class StatisticController extends Controller
 {
@@ -26,6 +27,32 @@ class StatisticController extends Controller
                     "name" => $cat['name'],
                     // "y" => floatval($posts_count)
                     "y" => round((100 * $posts_count / $posts), 3)
+                ];
+            }
+
+            return json_encode($dataPoints);
+        } catch (\Illuminate\Database\QueryException $ex) {
+            return view('errors');
+        }
+    }
+
+
+    public function reason()
+    {
+        try {
+            $reasons = Reason::all();
+         
+
+            $dataPoints = [];
+
+            foreach ($reasons as  $r) {
+
+                
+
+                $dataPoints[] = [
+                    "name" => $r['reason'],
+                    // "y" => floatval($posts_count)
+                    "y" => $r['del_num']
                 ];
             }
 
