@@ -36,7 +36,7 @@ $(document).ready(function () {
                temp_html+="<div class='row-12 border border-warning mb-2 border-3 d-flex'>";
                                temp_html+= "<div class='col-8 border' >";
                      
-                                temp_html+= "<h1><a href='/asiantrade/public/post/detail/"+items[i]['id']+"' target='_blank'>"+items[i]['title']+"</a></h1> <hr>";
+                                temp_html+= "<h1><a href='/post/detail/"+items[i]['id']+"' target='_blank'>"+items[i]['title']+"</a></h1> <hr>";
                                 temp_html+= "<div>";
                                 temp_html+= "<p>"+items[i]['description']+"</p>";
                                temp_html+= "</div>";
