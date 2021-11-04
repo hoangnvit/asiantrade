@@ -52,7 +52,7 @@ $(document).ready(function () {
                                             temp_html+= "<img class='product_avatar ' src='"+items[i]['avatar']+"' alt='picture of product'>";
                                           //  {{asset('uploads/images/'. $post['avatar'])}}
                                            temp_html+= "<br/>";
-                                           temp_html+= "<h1 class='text-primary'>"+items[i]['price']+"&#36;</h1>";
+                                           temp_html+= "<h5 class='text-primary'>"+items[i]['price']+"&#36;</h5>";
                                            temp_html+="</div>";
                                            temp_html+="</div>";
      
