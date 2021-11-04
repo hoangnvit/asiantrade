@@ -202,13 +202,13 @@ $.ajax({
 //Pie chart for posts by categories
 $.ajax({
     method: 'GET',
-    url: 'usage/pie_chart',
+    url: 'usage/pie_chart_delete',
     success: function (data) {
        console.log("AAA"+data);
        data = JSON.parse(data);
 
     
-        chart2= new Highcharts.chart('pie-chart', {
+        chart2= new Highcharts.chart('pie-chart-delete', {
             chart: {
                 plotBackgroundColor: null,
                 plotBorderWidth: null,
@@ -216,7 +216,7 @@ $.ajax({
                 type: 'pie'
             },
             title: {
-                text: 'Posts by Category'
+                text: 'Delete by Reason'
             },
             subtitle: {
                 text: 'Source: Asiantrade.com'
