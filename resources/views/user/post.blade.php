@@ -16,6 +16,7 @@
          <div class='border rounded border-warning m-2 p-2'>
           
 			<h5 class='text-primary'><u>{{$post['title']}}</u></h5>
+      <p class='text-primary'><u>{{$post['price']}}</u></p>
 			<p> Author: {{$author->username}}<br>Created time:{{ $post['created_at']}}</p> <hr>
 			
 			
