@@ -25,10 +25,10 @@
             <x-input id="title" class="mt-1 w-full" type="text" name="title" :value="old('title')" required autofocus />
         </div>
         <div class="row mt-2">
-            <x-label class='col-4' for="description" :value="__('Description')" />
+            <x-label class='col-4' for="description" :value="__('Description')" /><br>
 
             <!-- <x-input id="description" class="block mt-1 w-full" type="text" name="description" :value="old('description')"  /> -->
-            <textarea class="form-control col-8" id="description" name="description"></textarea>
+            <textarea class="form-control" id="description" name="description"></textarea>
         </div>
 
         <div class="row mt-2">
