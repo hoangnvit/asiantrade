@@ -1,7 +1,7 @@
 @props(['errors'])
 
 @if ($errors->any())
-    <div {{ $attributes }}>
+    <div {{ $attributes }} class="col-m-12">
         <div class="font-medium  text-center text-danger">
             {{ __('Some Errors.') }}
         </div>
