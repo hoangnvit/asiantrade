@@ -74,7 +74,7 @@
 
         <td class="col-1">
             <a class="button btn-primary border rounded mx-1 my-1" href="{{route('post_edit',$post['id'])}}">EDIT</a>
-            <!-- <a id="btn_delete" class="button btn-primary border rounded" onclick="return confirm('Are you sure?')" href="{{route('post_delete',$post['id'])}}">DELETE <i class="fa fa-trash"></i></a> -->
+          
             <a class="button btn-primary border rounded mx-1 my-1 p-1" href="{{route('user_posts_delete_form',['user_id'=>$post->user->id,'post_id'=>$post['id']])}}">DELETE</a>    
 
 
