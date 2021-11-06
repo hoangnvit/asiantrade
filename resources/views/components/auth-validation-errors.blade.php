@@ -1,6 +1,7 @@
 @props(['errors'])
 
 @if ($errors->any())
+    <div class="row">
     <div {{ $attributes }}>
         <div class="font-medium  text-center text-danger">
             {{ __('Some Errors.') }}
@@ -11,5 +12,6 @@
                 <li>{{ $error }}</li>
             @endforeach
         </ul>
+    </div>
     </div>
 @endif
