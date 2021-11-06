@@ -75,7 +75,7 @@
         <td class="col-1">
             <a class="button btn-primary border rounded mx-1 my-1" href="{{route('post_edit',$post['id'])}}">EDIT</a>
           
-            <a class="button btn-primary border rounded mx-1 my-1 p-1" href="{{route('admin_posts_delete_form',['user_id'=>$post->user->id,'post_id'=>$post['id']])}}">DELETE</a>    
+            <a class="button btn-primary border rounded mx-1 my-1 p-1" href="{{route('admin_posts_delete_form',['post_id'=>$post['id']])}}">DELETE</a>    
 
 
 
