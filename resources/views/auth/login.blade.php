@@ -14,9 +14,22 @@
 
     <!-- Validation Errors -->
     
-    <Validation-errors class="mb-4" :errors="$errors" />
+    <x-auth-validation-errors class="mb-4" :errors="$errors" />
     
     <br />
+
+
+</div>
+
+<div class='d-flex d-flex justify-content-center border border-2 rounded border-warning p-2'>
+    <!-- Session Status -->
+    <!-- <x-auth-session-status class="mb-4" :status="session('status')" /> -->
+
+    <!-- Validation Errors -->
+    
+    <!-- <x-auth-validation-errors class="mb-4" :errors="$errors" />
+    
+    <br /> -->
 
     <form method="POST" action="{{ route('login') }}" class='border border-1 p-5 rounded mx-2'>
         @csrf
