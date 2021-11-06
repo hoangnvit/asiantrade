@@ -14,7 +14,7 @@
 
     <!-- Validation Errors -->
     
-    <x-auth-validation-errors class="mb-4" :errors="$errors" />
+    <Validation-errors class="mb-4" :errors="$errors" />
     
     <br />
 
