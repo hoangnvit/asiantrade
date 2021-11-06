@@ -57,7 +57,9 @@ Route::post('/admin/categories/category/{i}', [App\Http\Controllers\Admin\Catego
 Route::get('/admin/posts', [App\Http\Controllers\Admin\PostController::class, 'index'])->middleware('auth')->name('admin_posts');
 Route::get('/admin/posts/add', [App\Http\Controllers\Admin\PostController::class, 'post_create'])->middleware('auth')->name('post_add');
 Route::post('/admin/posts/add', [App\Http\Controllers\Admin\PostController::class, 'post_store'])->middleware('auth')->name('post_store');
-Route::get('/admin/posts/delete/{i}', [App\Http\Controllers\Admin\PostController::class, 'post_delete'])->middleware('auth')->name('post_delete');
+Route::get('/admin/posts/delete/{i}/detail', [App\Http\Controllers\Admin\PostController::class, 'post_delete_form'])->middleware('auth')->name('admin_posts_delete_form');
+Route::post('/admin/posts/delete/{i}', [App\Http\Controllers\Admin\PostController::class, 'post_delete'])->middleware('auth')->name('admin_posts_delete');
+// Route::get('/admin/posts/delete/{i}', [App\Http\Controllers\Admin\PostController::class, 'post_delete'])->middleware('auth')->name('post_delete');
 Route::get('/admin/posts/post/{i}', [App\Http\Controllers\Admin\PostController::class, 'post_detail'])->middleware('auth')->name('post_detail');
 
 Route::post('/admin/posts/post/{i}', [App\Http\Controllers\Admin\PostController::class, 'post_edit'])->middleware('auth')->name('post_edit');

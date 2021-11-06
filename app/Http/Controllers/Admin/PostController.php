@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\Reason;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -94,20 +95,62 @@ class PostController extends Controller
     }
 
 
-    public function post_delete(int $i)
+    // public function post_delete(int $i)
+    // {
+    //     try {
+    //         $user = auth()->user();
+    //         if ($user['admin']) {
+
+    //             $post_delete = Post::find($i);
+    //             $post_delete->delete();
+    //             return redirect()->route('admin_posts');
+    //         } else return redirect()->route('home');
+    //     } catch (\Illuminate\Database\QueryException $ex) {
+    //         return view('errors');
+    //     }
+    // }
+
+    
+    public function post_delete(Request $request)
     {
         try {
             $user = auth()->user();
             if ($user['admin']) {
 
-                $post_delete = Post::find($i);
+                // $post = Post::find($request['post_id']);
+        $id = request('post_id');
+        
+        // try {
+            $post_delete = Post::find($id);
+          
+      
                 $post_delete->delete();
+                
+                $reason_id = request('reason_id');
+               
+                $r=Reason::find($reason_id);
+               
+                
+                  $temp=$r['del_num']+1;
+                
+                  
+                     $r['del_num']=$temp;
+                
+                     $r->save();
+                     
+                    // return $r;
+
                 return redirect()->route('admin_posts');
+            
             } else return redirect()->route('home');
         } catch (\Illuminate\Database\QueryException $ex) {
             return view('errors');
         }
     }
+       
+               
+
+   
 
 
     public function post_detail(int $i)
@@ -180,5 +223,17 @@ class PostController extends Controller
         } catch (\Illuminate\Database\QueryException $ex) {
             return view('errors');
         }
+    }
+
+    public function post_delete_form(Request $request){
+       
+        $post = Post::find($request['post_id']);
+        $reasons=Reason::all();
+
+
+        return view('admin.post_delete')->with('post', $post)->with('reasons', $reasons);
+
+        
+
     }
 }
