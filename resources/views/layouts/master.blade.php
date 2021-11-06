@@ -114,7 +114,7 @@
                                     {{ __('Messenger') }}
                                 </a>
 
-                                @if(Auth::user()->admin) <a class="dropdown-item" href="{{ route('admin') }}">
+                                @if(Auth::user()->admin) <a class="dropdown-item" href="{{ route('admin_users') }}">
                                     {{ __('Admin Page') }}
                                 </a>
                                 @endif
