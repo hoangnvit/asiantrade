@@ -262,8 +262,8 @@ class PostController extends Controller
                     // $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
                     // $image->move($destinationPath, $profileImage);
                     // $avatar = "$profileImage";
-                    // $avatar = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
-                    $avatar = cloudinary()->uploadFile($request->file('image')->getRealPath())->getSecurePath();
+                    $avatar = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
+                    // $avatar = cloudinary()->uploadFile($request->file('image')->getRealPath())->getSecurePath();
                 } else $avatar = $post['avatar'];
 
                $post['title'] = $request['title'];
