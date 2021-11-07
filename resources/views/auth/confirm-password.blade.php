@@ -7,8 +7,18 @@
 @section('content')
 
 
+<div class='d-flex d-flex justify-content-center rounded'>
+    <!-- Session Status -->
+    <!-- <x-auth-session-status class="mb-4" :status="session('status')" /> -->
 
-<div class='d-flex d-flex justify-content-center border border-2 rounded border-warning p-2'>
+    <!-- Validation Errors -->
+    
+    <x-auth-validation-errors class="mb-4" :errors="$errors" />
+    
+
+
+</div>
+<div class='d-flex d-flex justify-content-center  p-2'>
     <x-slot name="logo">
         <a href="/">
             <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
@@ -19,8 +29,7 @@
         {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
     </div>
 
-    <!-- Validation Errors -->
-    <x-auth-validation-errors class="mb-4" :errors="$errors" />
+   
 
     <form method="POST" action="{{ route('password.confirm') }}" class='border border-1 p-5 rounded mx-2'>
         @csrf
