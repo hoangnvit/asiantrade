@@ -8,7 +8,7 @@
 
 
 
-<div class='d-flex d-flex justify-content-center border border-2 rounded'>
+<div class='d-flex d-flex justify-content-center rounded'>
     <!-- Session Status -->
     <!-- <x-auth-session-status class="mb-4" :status="session('status')" /> -->
 
