@@ -52,7 +52,7 @@ class PostController extends Controller
                 'price' => 'required|numeric',
 
 
-                // 'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                 'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 
 
             ],
@@ -182,7 +182,7 @@ class PostController extends Controller
                 'price' => 'required|numeric',
 
 
-                // 'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                 'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 
 
             ],
