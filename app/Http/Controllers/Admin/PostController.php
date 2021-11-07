@@ -182,7 +182,7 @@ class PostController extends Controller
                 'price' => 'required|numeric',
 
 
-                 'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                 'avatar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 
 
             ],
