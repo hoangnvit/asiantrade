@@ -243,7 +243,7 @@ class PostController extends Controller
                 'price' => 'required|numeric',
 
 
-                // 'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                 'avatar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 
 
             ],
@@ -262,7 +262,8 @@ class PostController extends Controller
                     // $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
                     // $image->move($destinationPath, $profileImage);
                     // $avatar = "$profileImage";
-                    $avatar = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
+                    // $avatar = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
+                    $avatar = cloudinary()->uploadFile($request->file('image')->getRealPath())->getSecurePath();
                 } else $avatar = $post['avatar'];
 
                $post['title'] = $request['title'];
