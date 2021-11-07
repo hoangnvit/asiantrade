@@ -21,7 +21,7 @@
 
 </div>
 
-<div class='d-flex d-flex justify-content-center border border-2 rounded p-2'>
+<div class='d-flex d-flex justify-content-center border rounded p-2'>
     <!-- Session Status -->
     <!-- <x-auth-session-status class="mb-4" :status="session('status')" /> -->
 
