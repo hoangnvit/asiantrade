@@ -26,6 +26,7 @@
 					 @endif
 			  </div>
 	  </div>
-      <div>{{$posts->links()}}</div>
+     
 
 	  @endforeach
+	  <div>{{$posts->links()}}</div>
