@@ -6,8 +6,15 @@
 
 @section('content')
 
+<div class='d-flex d-flex justify-content-center rounded'>
+   
+    
+    <x-auth-validation-errors class="mb-2" :errors="$errors" />
+    
 
-<div class=' d-flex justify-content-center border border-2 rounded border-warning p-2'>
+
+</div>
+<div class=' d-flex justify-content-center p-2'>
 
     <!-- Validation Errors -->
     <x-auth-validation-errors class="mb-4" :errors="$errors" />

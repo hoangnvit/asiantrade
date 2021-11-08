@@ -5,17 +5,21 @@
 
 
 @section('content')
+<div class='d-flex d-flex justify-content-center rounded'>
+    <!-- Session Status -->
+    <!-- <x-auth-session-status class="mb-4" :status="session('status')" /> -->
+
+    <!-- Validation Errors -->
+    
+    <x-auth-validation-errors class="mb-2" :errors="$errors" />
+    
+
+
+</div>
 
 <div class=' d-flex justify-content-center border border-2 rounded border-warning p-2'>
 
 
-
-
-
-
-
-    <!-- Validation Errors -->
-    <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
     <form method="POST" action="{{ route('user_post_edit',['user_id'=>$post_detail->user_id,'post_id'=>$post_detail['id']]) }}" enctype="multipart/form-data" class='border border-1 p-5 rounded mx-2'>
         @csrf

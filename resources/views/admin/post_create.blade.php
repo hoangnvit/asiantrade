@@ -3,12 +3,18 @@
 @section('title', 'Users managed page')
 
 @section('content')
+<div class='d-flex d-flex justify-content-center rounded'>
+  
+    
+    <x-auth-validation-errors class="mb-2" :errors="$errors" />
+    
 
 
-<div class='d-flex d-flex justify-content-center border border-2 rounded border-warning p-2'>
+</div>
 
-    <!-- Validation Errors -->
-    <x-auth-validation-errors class="mb-4" :errors="$errors" />
+<div class='d-flex d-flex justify-content-center p-2'>
+
+  
 
     <form method="POST" action="{{ route('post_store') }}" enctype="multipart/form-data" class='border border-1 p-5 rounded mx-2'>
         @csrf
