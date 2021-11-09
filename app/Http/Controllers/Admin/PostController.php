@@ -10,9 +10,10 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index()
+    public function index($sort=1)
     {
         try {
+            return $sort;
             $user = auth()->user();
 
             if ($user['admin']) {

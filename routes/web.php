@@ -36,7 +36,7 @@ Route::post('/change_password', [App\Http\Controllers\Auth\ChangePasswordControl
 Route::get('/admin', [App\Http\Controllers\Admin\AdminController::class, 'index'])->middleware('auth')->name('admin');
 
 // route for  user managed
-Route::get('/admin/users', [App\Http\Controllers\Admin\UserController::class, 'index'])->middleware('auth')->name('admin_users');
+Route::get('/admin/users/{sort}', [App\Http\Controllers\Admin\UserController::class, 'index'])->middleware('auth')->name('admin_users');
 Route::get('/admin/users/user/{i}', [App\Http\Controllers\Admin\UserController::class, 'detail'])->middleware('auth')->name('detail');
 Route::get('/admin/users/add', [App\Http\Controllers\Admin\UserController::class, 'user_create'])->middleware('auth')->name('user_add');
 Route::post('/admin/users/add', [App\Http\Controllers\Admin\UserController::class, 'user_store'])->middleware('auth')->name('user_store');
