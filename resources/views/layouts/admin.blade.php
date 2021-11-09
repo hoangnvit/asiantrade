@@ -97,7 +97,7 @@
             <div class="col-2 border border-primary">
 
 
-                <ul class="list text-break">
+                <ul class="list text-wrap">
                     <li class="list-group-item"><a href="{{route('admin_users')}}"> Users</a></li>
                     <li class="list-group-item"><a href="{{route('admin_categories')}}">Categories</a></li>
                     <li class="list-group-item"><a href="{{route('admin_posts')}}">Posts</a></li>

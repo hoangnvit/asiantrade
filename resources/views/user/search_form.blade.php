@@ -28,9 +28,9 @@
         </select>
     </div>
     <div class="row mt-2 text-info">
-        <x-label class="col-6" for="category_id" :value="__('Category Filter:')" />
+        <x-label class="col-4" for="category_id" :value="__('Category Filter:')" />
 
-        <select class="col-6 text-info" id="category_id" name="category_id">
+        <select class="col-4 text-info" id="category_id" name="category_id">
             <option value=0>All</option>
             @foreach($cats as $cat)
 
