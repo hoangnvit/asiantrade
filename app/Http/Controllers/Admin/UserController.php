@@ -22,7 +22,9 @@ class UserController extends Controller
             if ($user['admin']) {
                 if($sort==0)
 
-                $users = User::all()->orderByDesc('arrived_at')->get();
+                $users = User::all()->sortBy('id');
+
+                
                 return view('admin.users')->with('users', $users);
             } else return redirect()->route('home');
         } catch (\Illuminate\Database\QueryException $ex) {
