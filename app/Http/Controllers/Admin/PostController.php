@@ -90,7 +90,7 @@ class PostController extends Controller
 
             );
 
-            return redirect()->route('admin_posts');
+            return redirect()->route('admin_posts',0);
         } catch (\Illuminate\Database\QueryException $ex) {
             return view('errors');
         }
@@ -142,7 +142,7 @@ class PostController extends Controller
                      
                     // return $r;
 
-                return redirect()->route('admin_posts');
+                return redirect()->route('admin_posts',0);
             
             } else return redirect()->route('home');
         } catch (\Illuminate\Database\QueryException $ex) {
@@ -222,7 +222,7 @@ class PostController extends Controller
 
             $a = $post->save();
 
-            return redirect()->route('admin_posts');
+            return redirect()->route('admin_posts',0);
         } catch (\Illuminate\Database\QueryException $ex) {
             return view('errors');
         }

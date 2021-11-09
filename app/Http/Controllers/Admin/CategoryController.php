@@ -75,7 +75,7 @@ class CategoryController extends Controller
 
             );
 
-            return redirect()->route('admin_categories');
+            return redirect()->route('admin_categories',0);
         } catch (\Illuminate\Database\QueryException $ex) {
             return view('errors');
         }
@@ -90,7 +90,7 @@ class CategoryController extends Controller
 
                 $cat_delete = Category::find($i);
                 $cat_delete->delete();
-                return redirect()->route('admin_categories');
+                return redirect()->route('admin_categories',0);
             } else return redirect()->route('home');
         } catch (\Illuminate\Database\QueryException $ex) {
             return view('errors');
@@ -147,7 +147,7 @@ class CategoryController extends Controller
 
             $a = $cat->save();
 
-            return redirect()->route('admin_categories');
+            return redirect()->route('admin_categories',0);
         } catch (\Illuminate\Database\QueryException $ex) {
             return view('errors');
         }
