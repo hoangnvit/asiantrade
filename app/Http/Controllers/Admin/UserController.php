@@ -20,9 +20,8 @@ class UserController extends Controller
             $user = auth()->user();
 
             if ($user['admin']) {
-                if($sort==0)
-
-                $users = User::all()->sortBy('id');
+                if($sort==0)$users = User::all()->sortBy('id');
+                else $users = User::all()->sortByDesc('id');
 
                 
                 return view('admin.users')->with('users', $users);
