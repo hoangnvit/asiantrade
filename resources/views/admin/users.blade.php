@@ -6,7 +6,7 @@
 
 @section('content')
 
-<h1><a href="users/add"> Add user</a></h1>
+<h3><a href="users/add"> Add user</a></h3>
 
 <x-auth-validation-errors class="mb-4" :errors="$errors" />
 <table class='table-responsive'>
@@ -14,7 +14,7 @@
     <tr class='border border-2'>
 
         <th class="col-1">
-            ID <a href="{{route('admin_users',0)}}">u</a><a href="{{route('admin_users',1)}}">D</a>
+            ID <a href="{{route('admin_users',0)}}">U</a><a href="{{route('admin_users',1)}}">D</a>
         </th>
         <th class="col-1">
             Username

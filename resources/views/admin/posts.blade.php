@@ -6,7 +6,7 @@
 
 @section('content')
 
-<h1><a href="posts/add"> Add Post</a></h1>
+<h3><a href="posts/add"> Add Post</a></h3>
 
 <x-auth-validation-errors class="mb-4" :errors="$errors" />
 <table class='table-responsive'>
@@ -73,7 +73,7 @@
         </td>
 
         <td class="col-1">
-            <a class="button btn-primary border rounded mx-1 my-1" href="{{route('post_edit',$post['id'])}}">EDIT</a>
+            <a class="button btn-primary border rounded mx-1 my-1 p-1" href="{{route('post_edit',$post['id'])}}">EDIT</a>
           
             <a class="button btn-primary border rounded mx-1 my-1 p-1" href="{{route('admin_posts_delete_form',['post_id'=>$post['id']])}}">DELETE</a>    
 

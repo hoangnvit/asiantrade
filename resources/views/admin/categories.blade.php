@@ -6,7 +6,7 @@
 
 @section('content')
 
-<h1><a href="categories/add"> Add Category</a></h1>
+<h3><a href="categories/add"> Add Category</a></h3>
 
 <x-auth-validation-errors class="mb-4" :errors="$errors" />
 <table class='table-responsive'>
