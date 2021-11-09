@@ -154,10 +154,11 @@ export default {
         this.list_messages = response.data;
         this.result_message = "";
 
-        this.title="";
-      this.message="";
-      this.sender="";
-      this.receiver="";
+         this.title = "";
+        this.message = "";
+        this.sent_time = "";
+        this.sender = "From: " ;
+        this.receiver = "To: " 
       });
     },
 
@@ -172,16 +173,18 @@ export default {
       this.ck_outbox = 1;
       this.ck_inbox = 0;
       //
-      
+       this.title = "";
+        this.message = "";
+        this.sent_time = "";
+        this.sender = "From: " ;
+        this.receiver = "To: " ;
+        // this.message_id_detail = response.data[0].id;
 
       axios.get("/user/messages/outbox").then((response) => {
         this.list_messages = response.data;
         this.result_message = "";
 
-        this.title="";
-      this.message="";
-      this.sender="";
-      this.receiver="";
+  
       });
     },
     message_detail(message_id) {
