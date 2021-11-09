@@ -95,7 +95,7 @@ class UserController extends Controller
             $user['avatar'] = $avatar;
            
             $user->save();
-            return redirect()->route('admin_users');
+            return redirect()->route('admin_users',0);
         } catch (\Illuminate\Database\QueryException $ex) {
             return view('errors');
         }
@@ -110,8 +110,8 @@ class UserController extends Controller
                 if ($user['id'] !== $i) {
                     $user_delete = User::find($i);
                     $user_delete->delete();
-                    return redirect()->route('admin_users');
-                } else return redirect()->route('admin_users')->withErrors(['You can not delete the current user loged in!']);
+                    return redirect()->route('admin_users',0);
+                } else return redirect()->route('admin_users',0)->withErrors(['You can not delete the current user loged in!']);
             } else return redirect()->route('home');
         } catch (\Illuminate\Database\QueryException $ex) {
             return view('errors');
