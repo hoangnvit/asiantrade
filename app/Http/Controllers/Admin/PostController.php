@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index($sort=1)
+    public function index($sort)
     {
         try {
             return $sort;

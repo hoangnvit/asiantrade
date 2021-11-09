@@ -98,9 +98,9 @@
 
 
                 <ul class="list text-break mx-0 col-12">
-                    <li class="list-group-item"><a href="{{route('admin_users')}}"> Users</a></li>
+                    <li class="list-group-item"><a href="{{route('admin_users'),['sort'=>0]}}"> Users</a></li>
                     <li class="list-group-item"><a href="{{route('admin_categories')}}">Categories</a></li>
-                    <li class="list-group-item"><a href="{{route('admin_posts')}}">Posts</a></li>
+                    <li class="list-group-item"><a href="{{route('admin_posts'),}}">Posts</a></li>
                     <li class="list-group-item"><a href="{{route('admin_statistic')}}">Statistic</a></li>
                 </ul>
             </div>
