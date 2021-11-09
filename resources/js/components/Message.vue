@@ -142,6 +142,13 @@ export default {
       this.display_messages = 1;
       this.ck_inbox = 1;
       this.ck_outbox = 0;
+//--------
+
+      this.title="";
+      this.message="";
+      this.sender="";
+      this.receiver="";
+
       this.get_unread();
       axios.get("/user/messages/inbox").then((response) => {
         this.list_messages = response.data;
@@ -159,6 +166,12 @@ export default {
       this.display_messages = 1;
       this.ck_outbox = 1;
       this.ck_inbox = 0;
+      //
+      this.title="";
+      this.message="";
+      this.sender="";
+      this.receiver="";
+
       axios.get("/user/messages/outbox").then((response) => {
         this.list_messages = response.data;
         this.result_message = "";
