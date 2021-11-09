@@ -13,23 +13,16 @@ use Illuminate\Validation\Rules;
 
 class UserController extends Controller
 {   
-    public function fix(){
-        $user=User::find(6);
-
-       
-        $user['username'] = strtolower($user['username']);
-       
-        $user->save();
-
-    }
-    public function index()
+    
+    public function index($sort)
     {
         try {
             $user = auth()->user();
 
             if ($user['admin']) {
+                if($sort==0)
 
-                $users = User::all();
+                $users = User::all()-> orderBy('id', 'desc');
                 return view('admin.users')->with('users', $users);
             } else return redirect()->route('home');
         } catch (\Illuminate\Database\QueryException $ex) {

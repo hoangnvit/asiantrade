@@ -13,7 +13,7 @@ class PostController extends Controller
     public function index($sort)
     {
         try {
-            return $sort;
+           
             $user = auth()->user();
 
             if ($user['admin']) {
