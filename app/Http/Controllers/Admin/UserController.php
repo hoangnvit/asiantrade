@@ -12,7 +12,16 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 
 class UserController extends Controller
-{
+{   
+    public function fix(){
+        $user=User::find(6);
+
+       
+        $user['username'] = strtolower($user['username']);
+       
+        $user->save();
+
+    }
     public function index()
     {
         try {
@@ -131,7 +140,7 @@ class UserController extends Controller
                 'email' => 'required|string|email|max:255||min:3|unique:users',
                 'address' => 'required|string|max:255|min:3',
                 'postalcode' => 'required|string|max:255|min:3',
-                'password' => ['required', 'confirmed', 'min:6', Rules\Password::defaults()],
+                'password' => ['required', 'confirmed', Rules\Password::defaults()],
             ],
             [
                 'lname.min' => ' Lastname is more than 3',

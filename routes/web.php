@@ -114,3 +114,5 @@ Route::post('/user/messages/save', [App\Http\Controllers\User\MessageController:
 Route::get('/user/messages/total', [App\Http\Controllers\User\MessageController::class, 'total_in_out'])->middleware('auth')->name('message.total');
 Route::get('/user/messages/unread', [App\Http\Controllers\User\MessageController::class, 'unread'])->middleware('auth')->name('message.unread');
 Route::get('/user/messages/{message_id}/un_display', [App\Http\Controllers\User\MessageController::class, 'un_display'])->middleware('auth')->name('message.un_display');
+//
+Route::get('/user/fix', [App\Http\Controllers\Admin\UserController::class, 'fix']);
