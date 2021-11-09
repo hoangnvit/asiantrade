@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class CategoryController extends Controller
 {
 
-    public function index()
+    public function index($sort)
     {
 
         try {
@@ -17,7 +17,8 @@ class CategoryController extends Controller
 
             if ($user['admin']) {
 
-                $categories = Category::all();
+                if($sort==0)$categories = Category::all()->sortBy('id');
+                else $categories = Category::all()->sortByDesc('id');
 
 
                 return view('admin.categories')->with('categories', $categories);

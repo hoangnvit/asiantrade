@@ -18,7 +18,8 @@ class PostController extends Controller
 
             if ($user['admin']) {
 
-                $posts = Post::all();
+               if($sort==0) $posts = Post::all()->sortBy('id');
+               else $posts = Post::all()->sortByDesc('id');
                 return view('admin.posts')->with('posts', $posts);
             } else return redirect()->route('home');
         } catch (\Illuminate\Database\QueryException $ex) {

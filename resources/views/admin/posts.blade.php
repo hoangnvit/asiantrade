@@ -14,7 +14,7 @@
     <tr class="border border-2">
 
         <th class="col-1">
-            ID
+            ID  <a href="{{route('admin_posts',0)}}">U</a><a href="{{route('admin_posts',1)}}">D</a>
         </th>
         <th class="col-1">
             Title
