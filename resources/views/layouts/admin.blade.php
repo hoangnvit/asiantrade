@@ -94,7 +94,7 @@
 
         <div class='row' id="main">
 
-            <div class="col-2 border border-primary">
+            <div class="col-2 border border-primary col-sm-4">
 
 
                 <ul class="list text-break mx-0 col-12">
@@ -104,7 +104,7 @@
                     <li class="list-group-item"><a href="{{route('admin_statistic')}}">Statistic</a></li>
                 </ul>
             </div>
-            <div class='col-10 border border-primary'>
+            <div class='col-10 border border-primary col-sm-8'>
 
                 @yield('content')
 
