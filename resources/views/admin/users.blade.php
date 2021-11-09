@@ -9,7 +9,7 @@
 <h3><a href="users/add"> Add user</a></h3>
 
 <x-auth-validation-errors class="mb-4" :errors="$errors" />
-<table class='table-responsive'>
+<table class='table-responsive bg-info'>
 
     <tr class='border border-2'>
 
