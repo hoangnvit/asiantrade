@@ -167,7 +167,7 @@ class UserController extends Controller
 
 
 
-            return redirect()->route('admin_users');
+            return redirect()->route('admin_users',0);
         } catch (\Illuminate\Database\QueryException $ex) {
             return view('errors');
         }
