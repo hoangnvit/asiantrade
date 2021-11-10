@@ -18,8 +18,8 @@ class CategoryController extends Controller
             if ($user['admin']) {
 
                 if($sort==0)$categories = Category::all()->sortBy('id');
-                else if($sort==1) $categories = Category::all()->sortByDesc('id');
-                else if($sort==2) $categories = Category::all()->sortBy('name');
+                elseif($sort==1) $categories = Category::all()->sortByDesc('id');
+                elseif($sort==2) $categories = Category::all()->sortBy('name');
                 else $categories = Category::all()->sortByDesc('name');
 
 
