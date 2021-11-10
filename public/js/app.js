@@ -2027,6 +2027,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.sent_time = "";
       this.sender = "From: " ;
       this.receiver = "To: " ;
+      this.display_detail=0;
 
       this.display_form = 0;
       this.display_messages = 1;
@@ -2052,11 +2053,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.sent_time = "";
       this.sender = "From: " ;
       this.receiver = "To: " ;
+      this.display_detail=0;
 
       this.display_form = 0;
       this.display_messages = 1;
       this.ck_outbox = 1;
       this.ck_inbox = 0;
+      
 
 
       axios.get("/user/messages/outbox").then(function (response) {

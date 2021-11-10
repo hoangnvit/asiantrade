@@ -142,6 +142,7 @@ export default {
       this.display_messages = 1;
       this.ck_inbox = 1;
       this.ck_outbox = 0;
+      this.display_detail=0;
 //--------
 
       this.title="";
@@ -172,6 +173,7 @@ export default {
       this.display_messages = 1;
       this.ck_outbox = 1;
       this.ck_inbox = 0;
+      this.display_detail=0;
       //
        this.title = "";
         this.message = "";
