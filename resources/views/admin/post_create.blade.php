@@ -29,13 +29,13 @@
             <x-label class="col-4" for="description" :value="__('Description')" />
 
             <!-- <x-input class="col-8" id="description" class="block mt-1" type="text" name="description" :value="old('description')"  /> -->
-            <textarea class="form-control" id="description" name="description"></textarea>
+            <textarea class="form-control" id="description" name="description" :value="old('description')"></textarea>
         </div>
 
         <div class="row mt-2">
             <x-label class="col-4" for="content" :value="__('Content')" />
 
-            <textarea class="form-control col-8" id="content" name="content"></textarea>
+            <textarea class="form-control col-8" id="content" name="content" :value="old('content')"></textarea>
         </div>
 
 
