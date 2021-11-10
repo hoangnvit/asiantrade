@@ -22,7 +22,7 @@ class UserController extends Controller
             $u['username']=strtolower($u['username']);
             $user->save();
         }
-        return 0;
+        return $user;
     }
 
     public function index($sort)
