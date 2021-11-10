@@ -38,7 +38,7 @@
             <x-label class='col-4' for="description" :value="__('Description')" /><br>
 
             <!-- <x-input id="description" class="block mt-1 w-full" type="text" name="description" :value="old('description')"  /> -->
-            <textarea class="form-control" id="description" name="description" >{{old('description') }}</textarea>
+            <textarea class="form-control col-10" id="description" name="description" >{{old('description') }}</textarea>
         </div>
 
         <div class="row mt-2">
