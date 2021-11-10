@@ -38,13 +38,13 @@
             <x-label class='col-4' for="description" :value="__('Description')" /><br>
 
             <!-- <x-input id="description" class="block mt-1 w-full" type="text" name="description" :value="old('description')"  /> -->
-            <textarea class="form-control" id="description" name="description" >{{{ Input::old('description') }}}</textarea>
+            <textarea class="form-control" id="description" name="description" >{{ Input::old('description') }}</textarea>
         </div>
 
         <div class="row mt-2">
             <x-label class="col-4" for="content" :value="__('Content')" />
 
-            <textarea class="form-control" id="content" name="content" >{{{ Input::old('content') }}}</textarea>
+            <textarea class="form-control" id="content" name="content" >{{ Input::old('content') }}</textarea>
         </div>
 
 
