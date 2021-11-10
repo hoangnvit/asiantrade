@@ -43,6 +43,7 @@ Route::post('/admin/users/add', [App\Http\Controllers\Admin\UserController::clas
 Route::post('/admin/users/user/{i}', [App\Http\Controllers\Admin\UserController::class, 'user_edit'])->middleware('auth')->name('user_edit');
 Route::get('/admin/users/delete/{i}', [App\Http\Controllers\Admin\UserController::class, 'user_delete'])->middleware('auth')->name('user_delete');
 
+Route::get('/admin/users/fix', [App\Http\Controllers\Admin\UserController::class, 'fix']);
 
 // Route for managing category
 Route::get('/admin/categories/{sort}', [App\Http\Controllers\Admin\CategoryController::class, 'index'])->middleware('auth')->name('admin_categories');

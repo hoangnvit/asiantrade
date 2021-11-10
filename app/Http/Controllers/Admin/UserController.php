@@ -14,6 +14,17 @@ use Illuminate\Validation\Rules;
 class UserController extends Controller
 {   
     
+    public function fix(){
+
+        $user=User::all();
+        foreach($user as $u){
+
+            $u['username']=strtolower($u['username']);
+            $user->save();
+        }
+        return 0;
+    }
+
     public function index($sort)
     {
         try {

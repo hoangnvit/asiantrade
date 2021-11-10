@@ -56,7 +56,7 @@
             @else {{$user['id']}}
             @endif
         </td>
-        <td class="col-1 text-capitalize">
+        <td class="col-1">
             {{$user['username']}}
         </td>
         <td class="col-1">
