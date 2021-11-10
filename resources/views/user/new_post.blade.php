@@ -44,7 +44,7 @@
         <div class="row mt-2">
             <x-label class="col-4" for="content" :value="__('Content')" />
 
-            <textarea class="form-control" id="content" name="content" :value="old('content')></textarea>
+            <textarea class="form-control" id="content" name="content" :value="old('content')"></textarea>
         </div>
 
 
