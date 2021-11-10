@@ -14,10 +14,10 @@
     <tr class='border border-2'>
 
         <th class="col-1">
-            ID <a href="{{route('admin_users',0)}}">U</a><a href="{{route('admin_users',1)}}">D</a>
+            ID&nbsp; <a href="{{route('admin_users',0)}}">&#8593;</a>&nbsp;<a href="{{route('admin_users',1)}}">&#8593;</a>
         </th>
         <th class="col-1">
-            Username
+            Username&nbsp;<a href="{{route('admin_users',2)}}">&#8593;</a>&nbsp;<a href="{{route('admin_users',3)}}">&#8593;</a>
         </th>
         <th class="col-1">
             Fullname

@@ -9,15 +9,15 @@
 <h3><a href="posts/add"> Add Post</a></h3>
 
 <x-auth-validation-errors class="mb-4" :errors="$errors" />
-<table class='table-responsive bg-info'>
+<table class='table-responsive bg-light'>
 
     <tr class="border border-2">
 
         <th class="col-1">
-            ID  <a href="{{route('admin_posts',0)}}">U</a><a href="{{route('admin_posts',1)}}">D</a>
+            ID&nbsp;  <a href="{{route('admin_posts',0)}}">&#8593;</a>&nbsp;<a href="{{route('admin_posts',1)}}">&#8595;</a>
         </th>
         <th class="col-1">
-            Title
+            Title&nbsp;  <a href="{{route('admin_posts',2)}}">&#8593;</a>&nbsp;<a href="{{route('admin_posts',3)}}">&#8595;</a>
         </th>
 
         <th class="col-1">
