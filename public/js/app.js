@@ -2022,6 +2022,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     getinbox: function getinbox() {
       var _this3 = this;
 
+      this.title = "";
+      this.message = "";
+      this.sent_time = "";
+      this.sender = "From: " ;
+      this.receiver = "To: " ;
+
       this.display_form = 0;
       this.display_messages = 1;
       this.ck_inbox = 1;
@@ -2041,11 +2047,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     getoutbox: function getoutbox() {
       var _this5 = this;
+      this.title = "";
+      this.message = "";
+      this.sent_time = "";
+      this.sender = "From: " ;
+      this.receiver = "To: " ;
 
       this.display_form = 0;
       this.display_messages = 1;
       this.ck_outbox = 1;
       this.ck_inbox = 0;
+
+
       axios.get("/user/messages/outbox").then(function (response) {
         _this5.list_messages = response.data;
         _this5.result_message = "";
