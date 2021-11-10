@@ -17,7 +17,7 @@
             ID&nbsp <a href="{{route('admin_categories',0)}}">&#8593;</a>&nbsp<a href="{{route('admin_categories',1)}}">&#8595;</a>
         </th>
         <th class="col-1">
-            Name
+            Name&nbsp <a href="{{route('admin_categories',2)}}">&#8593;</a>&nbsp<a href="{{route('admin_categories',3)}}">&#8595;</a>
         </th>
         <th class="col-1">
             Avatar

@@ -18,7 +18,9 @@ class CategoryController extends Controller
             if ($user['admin']) {
 
                 if($sort==0)$categories = Category::all()->sortBy('id');
-                else $categories = Category::all()->sortByDesc('id');
+                else if($sort==1) $categories = Category::all()->sortByDesc('id');
+                else if($sort==1) $categories = Category::all()->sortBy('name');
+                else $categories = Category::all()->sortByDesc('name');
 
 
                 return view('admin.categories')->with('categories', $categories);
