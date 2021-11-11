@@ -28,11 +28,11 @@
         
          </div>
 
-         <div>
-      <h5 class="text-primary"> Related posts:</h5>
+         <div class="mx-2">
+      <h5 class="text-primary"><u> Related posts:</u></h5>
       @foreach($related_posts as $p)
         @if($p['id']!=$post['id'])
-        <p><a href="{{route('post',$p['id'])}}">{{$p['title']}}</a></p>
+        <p class="font-italic"><a href="{{route('post',$p['id'])}}">{{$p['title']}}</a> &nbsp; Price: {{$p['price']}} &nbsp; Published at {{$p['create_at']}}</p>
         @endif
       @endforeach
       <hr>
