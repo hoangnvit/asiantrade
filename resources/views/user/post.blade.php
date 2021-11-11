@@ -33,7 +33,7 @@
         <ul>
         @foreach($related_posts as $p)
           @if($p['id']!=$post['id'])
-          <li class="font-italic"><a href="{{route('post',$p['id'])}}">{{$p['title']}}</a> &nbsp; Price: {{$p['price']}} &nbsp; Published at {{$p['create_at']}}</li>
+          <li class="font-italic"><a href="{{route('post',$p['id'])}}">{{$p['title']}} &nbsp; Price: ${{$p['price']}} &nbsp; Published at: {{$p['created_at']}}</a></li>
           @endif
         @endforeach
         
