@@ -119,7 +119,8 @@ class PostController extends Controller
             );
 
             // return redirect()->route('home');
-            return redirect()->route('user_posts', $user['id']);
+            // return redirect()->route('user_posts', $user['id']);
+            return redirect()->route('post',$post['id']);
         } catch (\Illuminate\Database\QueryException $ex) {
             return view('errors');
         }
