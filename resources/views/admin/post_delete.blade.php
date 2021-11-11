@@ -30,7 +30,7 @@
         <div class="row mt-2">
             <x-label class="col-4" for="reason_id" :value="__('Reason')" />
 
-            <select class="col-4" id="reason_id" name="reason_id">
+            <select class="col-8" id="reason_id" name="reason_id">
                 @foreach($reasons as $r)
                 <option value="{{$r['id']}}">{{$r['reason']}}</option>
                 @endforeach
