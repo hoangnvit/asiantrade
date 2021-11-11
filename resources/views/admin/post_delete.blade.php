@@ -6,6 +6,12 @@
 
 @section('content')
 
+<div class=' d-flex justify-content-center'>
+<x-auth-validation-errors class="mb-4" :errors="$errors" />
+    <h5 class="text-warning">You are deleting post: "{{$post['title']}}"</h5>
+
+</div>
+
 <div class=' d-flex justify-content-center border border-2 rounded border-warning p-2'>
 
 
@@ -15,8 +21,7 @@
 
 
     <!-- Validation Errors -->
-    <x-auth-validation-errors class="mb-4" :errors="$errors" />
-    <h4 class="text-warning">You are deleting post: "{{$post['title']}}"</h4>
+    
 
     <form method="POST" action="{{route('admin_posts_delete',['user_id'=>$post['user_id'], 'post_id'=>$post['id']])}}" enctype="multipart/form-data" class='border border-1 p-5 rounded mx-2'>
         @csrf
