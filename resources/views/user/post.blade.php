@@ -23,6 +23,14 @@
 			
 
 			<div class='image_responsive'><?php echo $post['content']?></div>
+      <div>
+      <h5> Related posts:</h5>
+      @foreach($related_posts as $p)
+      <p><a href="{{route('post',$p['id'])}}">{{$p['title']}}</a></p>
+      @endforeach
+
+
+      </div>
           
         
          </div>

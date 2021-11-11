@@ -48,8 +48,12 @@ class PostController extends Controller
 
             $cat = Category::find($post->category_id);
 
+            $related_posts=Post::where('category_id', $post->category_id)
+                        ->take(5)
+                        ->get();
 
-            return view('user.post')->with('post', $post)->with('author', $author)->with('cat', $cat);
+
+            return view('user.post')->with('post', $post)->with('author', $author)->with('cat', $cat)->with('related_posts',$related_posts);
         } catch (\Illuminate\Database\QueryException $ex) {
             return view('errors');
         }
