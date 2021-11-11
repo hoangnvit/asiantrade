@@ -18,7 +18,7 @@
     </div>
     <hr>
     <div class="row">
-        <x-label class="col-6 text-info" for="search_field" :value="__('Search Field:')" />
+        <x-label class="col-4 text-info" for="search_field" :value="__('Search Field:')" />
 
         <select class="col-4 text-info" id="search_field" name="search_field">
             <option value=0>Title</option>
@@ -28,7 +28,7 @@
         </select>
     </div>
     <div class="row mt-2 text-info">
-        <x-label class="col-6" for="category_id" :value="__('Category Filter:')" />
+        <x-label class="col-4" for="category_id" :value="__('Category Filter:')" />
 
         <select class="col-4 text-info" id="category_id" name="category_id">
             <option value=0>All</option>
