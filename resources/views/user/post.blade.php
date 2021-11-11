@@ -30,10 +30,10 @@
 
          <div class="mx-2">
       <h5 class="text-primary"><u> Related posts:</u></h5>
-        <ul class="list-group list-group-flush">
+        <ul>
         @foreach($related_posts as $p)
           @if($p['id']!=$post['id'])
-          <li class="list-group-item font-italic"><a href="{{route('post',$p['id'])}}">{{$p['title']}}</a> &nbsp; Price: {{$p['price']}} &nbsp; Published at {{$p['create_at']}}</li>
+          <li class="font-italic"><a href="{{route('post',$p['id'])}}">{{$p['title']}}</a> &nbsp; Price: {{$p['price']}} &nbsp; Published at {{$p['create_at']}}</li>
           @endif
         @endforeach
         
