@@ -23,17 +23,22 @@
 			
 
 			<div class='image_responsive'><?php echo $post['content']?></div>
-      <div>
-      <h5> Related posts:</h5>
-      @foreach($related_posts as $p)
-      <p><a href="{{route('post',$p['id'])}}">{{$p['title']}}</a></p>
-      @endforeach
-
-
-      </div>
+     
           
         
          </div>
+
+         <div>
+      <h5 class="text-primary"> Related posts:</h5>
+      @foreach($related_posts as $p)
+        @if($p['id']!=$post['id'])
+        <p><a href="{{route('post',$p['id'])}}">{{$p['title']}}</a></p>
+        @endif
+      @endforeach
+      <hr>
+
+
+      </div>
          <div class="card-body">
                 <h5 class="btn btn-info" onclick="toggle_message()">Contact: {{$post->user->username}}</h5>
                 
