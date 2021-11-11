@@ -35,7 +35,7 @@
           @if($p['id']!=$post['id'])
           <li class="list-group-item font-italic"><a href="{{route('post',$p['id'])}}">{{$p['title']}}</a> &nbsp; Price: {{$p['price']}} &nbsp; Published at {{$p['create_at']}}</li>
           @endif
-        @
+        
   </ul>
       <hr>
 
