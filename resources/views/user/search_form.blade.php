@@ -18,9 +18,9 @@
     </div>
     <hr>
     <div class="row">
-        <x-label class="col-6 text-info" for="search_field" :value="__('Search Field:')" />
+        <x-label class="col-4 text-info" for="search_field" :value="__('Search Field:')" />
 
-        <select class="col-6 text-info" id="search_field" name="search_field">
+        <select class="col-4 text-info" id="search_field" name="search_field">
             <option value=0>Title</option>
             <option value=1>User</option>
 
