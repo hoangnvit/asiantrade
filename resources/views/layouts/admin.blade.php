@@ -100,7 +100,7 @@
                 <ul class="list text-break mx-0 col-12">
                     <li class="list-group-item"><a href="{{route('admin_users',0)}}"> Users</a></li>
                     <li class="list-group-item"><a href="{{route('admin_categories',0)}}">Categories</a></li>
-                    <li class="list-group-item"><a href="{{route('a')}}">2Categories</a></li>
+                    
                     <li class="list-group-item"><a href="{{route('admin_posts',0)}}">Posts</a></li>
                     <li class="list-group-item"><a href="{{route('admin_statistic')}}">Report</a></li>
                 </ul>
