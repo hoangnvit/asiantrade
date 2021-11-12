@@ -15,7 +15,7 @@ class ReasonSeeder extends Seeder
     public function run()
     {
         DB::table('reasons')->insert([
-            'reason' => 'Shop closed',
+            'reason' => 'Other',
             'del_num'=>2,
             'dis_num'=>0,
             
