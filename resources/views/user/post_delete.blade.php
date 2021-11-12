@@ -19,7 +19,7 @@
 
     <form method="POST" action="{{route('user_posts_delete',['user_id'=>$post['user_id'], 'post_id'=>$post['id']])}}" enctype="multipart/form-data" class='border border-1 p-5 rounded mx-2'>
         @csrf
-        <input id="id" class="block mt-1 w-full" type="hidden" name="id" value="{{ $post_detail['id'] ?? '' }}" required autofocus />
+      
         
         <div class="row mt-2">
             <x-label class="col-4" for="reason_id" :value="__('Reason:')" />
