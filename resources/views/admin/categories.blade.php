@@ -6,7 +6,7 @@
 
 @section('content')
 
-<h3><a href="{{route('a')}}"> Add Category</a></h3>
+<h3><a href="categories/add"> Add Category</a></h3>
 
 <x-auth-validation-errors class="mb-4" :errors="$errors" />
 <table class='table-responsive bg-light'>
