@@ -48,10 +48,10 @@ Route::get('/admin/users/delete/{i}', [App\Http\Controllers\Admin\UserController
 // Route for managing category
 Route::get('/admin/categories/{sort}', [App\Http\Controllers\Admin\CategoryController::class, 'index'])->middleware('auth')->name('admin_categories');
 Route::get('/admin/categories/category/{i}', [App\Http\Controllers\Admin\CategoryController::class, 'category_detail'])->middleware('auth')->name('category_detail');
-Route::get('/admin/categories/add', [App\Http\Controllers\Admin\CategoryController::class, 'category_create'])->middleware('auth')->name('category_add');
-Route::post('/admin/categories/add', [App\Http\Controllers\Admin\CategoryController::class, 'category_store'])->middleware('auth')->name('category_store');
+// Route::get('/admin/categories/add', [App\Http\Controllers\Admin\CategoryController::class, 'category_create'])->middleware('auth')->name('category_add');
+Route::post('/admin/categories/add1', [App\Http\Controllers\Admin\CategoryController::class, 'category_store'])->middleware('auth')->name('category_store');
 Route::get('/admin/categories/delete/{i}', [App\Http\Controllers\Admin\CategoryController::class, 'category_delete'])->middleware('auth')->name('category_delete');
-Route::get('/admin/a', [App\Http\Controllers\Admin\CategoryController::class, 'a'])->name('a');
+Route::get('/admin/categories/add', [App\Http\Controllers\Admin\CategoryController::class, 'a'])->middleware('auth')->name('a');
 
 
 Route::post('/admin/categories/category/{i}', [App\Http\Controllers\Admin\CategoryController::class, 'category_edit'])->middleware('auth')->name('category_edit');
