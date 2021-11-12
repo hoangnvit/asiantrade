@@ -101,7 +101,7 @@
                     <li class="list-group-item"><a href="{{route('admin_users',0)}}"> Users</a></li>
                     <li class="list-group-item"><a href="{{route('admin_categories',0)}}">Categories</a></li>
                     <li class="list-group-item"><a href="{{route('admin_posts',0)}}">Posts</a></li>
-                    <li class="list-group-item"><a href="{{route('admin_statistic')}}">Statistic</a></li>
+                    <li class="list-group-item"><a href="{{route('admin_statistic')}}">Report</a></li>
                 </ul>
             </div>
             <div class='col-lg-10 border border-primary col-sm-8'>
