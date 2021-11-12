@@ -14,24 +14,7 @@ use Illuminate\Validation\Rules;
 class UserController extends Controller
 {   
     
-    public function fix(){
-
-        $user=User::find(42);
-        $user1=User::find(43);
-        $user2=User::find(44);
-        $user3=User::find(45);
-        $user['username']=strtolower( $user['username']);
-        $user1['username']=strtolower( $user1['username']);
-        $user2['username']=strtolower( $user2['username']);
-        $user3['username']=strtolower( $user3['username']);
-        $user->save();
-        $user1->save();
-        $user2->save();
-        $user3->save();
-        return "AAA";
-
-
-    }
+  
 
     public function index($sort)
     {
