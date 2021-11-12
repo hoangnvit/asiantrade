@@ -28,7 +28,7 @@
         <!-- <input id="id" class="block mt-1 w-full" type="hidden" name="id" value="{{ $post_detail['id'] ?? '' }}" required autofocus /> -->
         
         <div class="row mt-2">
-            <x-label class="col-4" for="reason_id" :value="__('Delete Reason')" />
+            <x-label class="col-4" for="reason_id" :value="__('Reason:')" />
            
             <select class="col-8" id="reason_id" name="reason_id">
                 @foreach($reasons as $r)
