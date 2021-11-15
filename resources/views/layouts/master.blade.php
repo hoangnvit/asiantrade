@@ -110,7 +110,7 @@
                                     {{ __('Profile') }}
                                 </a>
 
-                                <a class="dropdown-item" href="{{ route('message') }}">
+                                <a class="dropdown-item" href="{{ route('message') }}" target="_blank">
                                     {{ __('Messenger') }}
                                 </a>
 

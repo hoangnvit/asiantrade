@@ -7,7 +7,7 @@ $(document).ready(function() {
         method: 'GET',
         url: 'usage/user_line_chart',
         success: function (data) {
-           console.log("user data"+data);
+        //    console.log("user data"+data);
            data = JSON.parse(data);
            list_month=[];
            list_counts=[];
@@ -76,7 +76,7 @@ $.ajax({
     method: 'GET',
     url: 'usage/post_line_chart',
     success: function (data) {
-       console.log("post data"+data);
+    //    console.log("post data"+data);
        data = JSON.parse(data);
        list_month=[];
        list_counts=[];
@@ -149,7 +149,7 @@ $.ajax({
     method: 'GET',
     url: 'usage/pie_chart',
     success: function (data) {
-       console.log("AAA"+data);
+    //    console.log("AAA"+data);
        data = JSON.parse(data);
 
     
@@ -204,7 +204,7 @@ $.ajax({
     method: 'GET',
     url: 'usage/pie_chart_delete',
     success: function (data) {
-       console.log("AAA"+data);
+    //    console.log("AAA"+data);
        data = JSON.parse(data);
 
     
@@ -216,7 +216,7 @@ $.ajax({
                 type: 'pie'
             },
             title: {
-                text: 'Delete by Reason'
+                text: ' Post Deleted by Reason'
             },
             subtitle: {
                 text: 'Source: Asiantrade.com'
@@ -261,7 +261,7 @@ $.ajax({
     method: 'GET',
     url: 'usage/pie_chart_delete_reason',
     success: function (data) {
-       console.log("AAA"+data);
+    //    console.log("AAA"+data);
        data = JSON.parse(data);
 
     

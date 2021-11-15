@@ -231,8 +231,8 @@ export default {
             title: this.message_title,
           })
           .then((response) => {
-            console.log("message save");
-            console.log(response.data);
+            // console.log("message save");
+            // console.log(response.data);
             this.message_body = "";
             this.message_title = "";
             this.receiver = "";
@@ -246,7 +246,7 @@ export default {
       axios
         .get("/user/messages/" + message_id + "/un_display")
         .then((response) => {
-          console.log("respon" + response.data);
+          // console.log("respon" + response.data);
           let ck_box = response.data;
 
           this.message_body = "";

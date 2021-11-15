@@ -2105,8 +2105,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           receiver_id: this.receiver,
           title: this.message_title
         }).then(function (response) {
-          console.log("message save");
-          console.log(response.data);
+          // console.log("message save");
+          // console.log(response.data);
           _this8.message_body = "";
           _this8.message_title = "";
           _this8.receiver = "";
@@ -2119,9 +2119,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     un_display: function un_display(message_id) {
       var _this9 = this;
 
-      console.log("undisplay" + message_id);
+      // console.log("undisplay" + message_id);
       axios.get("/user/messages/" + message_id + "/un_display").then(function (response) {
-        console.log("respon" + response.data);
+        // console.log("respon" + response.data);
         var ck_box = response.data;
         _this9.message_body = "";
         _this9.message_title = "";
